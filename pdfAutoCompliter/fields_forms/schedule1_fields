@@ -1,0 +1,25 @@
+[FIELDS]
+#ssn
+ssn = form1[0].Page1[0].f1_02[0]
+
+test2 = form1[0].Page1[0].f1_03[0]
+
+test = form1[0].Page1[0].f1_05[0]
+
+test3 = form1[0].Page1[0].f1_07[0]
+
+#listtypeofotherincome
+other_income_sum = form1[0].Page1[0].Line8z_ReadOrder[0].f1_32[0]
+
+#""""""""
+other_income_src = form1[0].Page1[0].Line8z_ReadOrder[0].f1_33[0]
+
+#line8z
+other_income_amount = form1[0].Page1[0].f1_34[0]
+
+#line9
+total_income = form1[0].Page1[0].f1_35[0]
+
+#line10
+sum = form1[0].Page1[0].f1_36[0]
+
