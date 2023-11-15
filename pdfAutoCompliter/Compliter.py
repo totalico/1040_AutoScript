@@ -11,7 +11,7 @@ adjested = 0
 def reader():
 
     forms = ['1040']
-    calc   =configObjToArray('CALC_DATA' , '.editorconfig')
+    calc   = Schedules.configObjToArray('CALC_DATA', '.editorconfig')
     fields = configObjToArray('FIELDS' , '.editorconfig')
     filler = configObjToArray('FILLER_DETAILS' , '.editorconfig')
     dependets = configObjToArray('DEPENDENCE', '.editorconfig')

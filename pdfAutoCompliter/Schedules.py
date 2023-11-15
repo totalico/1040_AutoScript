@@ -1,10 +1,6 @@
 import configparser
 import re
-
 from pypdf import PdfReader, PdfWriter
-from configparser import ConfigParser
-import Util
-
 
 def configObjToArray (option , file):
     #   CREATE OBJECT
@@ -19,9 +15,14 @@ def configObjToArray (option , file):
 
 
 
-def f8812 (schedulePath, scheduleFields , f1040_l11):
+def f8812 (schedulePath, scheduleFields ,f1040_l1 , f1040_l11 ,f1040_l18_tax ,s3_l1_1116 ,dependancesNum):
 
-
+    childCredit = 2000
+    additionalChildCredit = 1500
+    otherStatuses=200000
+    workSheetA = f1040_l18_tax - s3_l1_1116
+    l5=dependancesNum*childCredit
+    l16b = dependancesNum*additionalChildCredit
 
     fields = configObjToArray('FIELDS' , 'C:\\Users\\aman\\PycharmProjects\\pdfAutoCompliter\\fields_forms\\schedule1_fields')
     data   = configObjToArray('CALC_DATA' , '.\\.editconfig')
@@ -35,6 +36,36 @@ def f8812 (schedulePath, scheduleFields , f1040_l11):
         writer.pages[0], {
             fields['name'] : personal_data['name'] +' '+ personal_data['family_name'],
             fields['ssn'] : personal_data ['ssn'],
+            fields['l1_gross_income']:str (f1040_l11),
+            fields['l2d_0']:'0',
+            fields['l3__gross_income']: str (f1040_l11),
+            fields['l4_num_children']:  str(dependancesNum),
+            fields['l5_mult_l4_2000']: str(l5),
+            fields['l6_non_qualified_children-0']:'0',
+            fields['l7_mult_l6_500']: '0',
+            fields['l8_add_l7_l5']: str(l5),
+            fields['l9_status_200k']: str(otherStatuses),
+            fields['l10_sub_from_l3_l9-0']: '0', #is wages > 200k ? I wish...
+            fields['l11_mult_l10_0.05']: '0',
+            fields['l12_sub_l8_l11']: str(l5), #as l8
+            fields['l13_credit_limit_worksheet_A']: str (workSheetA),
+            fields['l14-0']:'0',
+            fields['l16a_sub_l12_l14']:  str(l5), #as l8
+            fields['l16b1_num_children']: str(dependancesNum),
+            fields['l16b2_l16b1*1500']: str(l16b),
+            fields['l17_smaller_l16a_l16b2']: str(l16b), #nowadays cannot be otherwise
+            fields['l18a_earned_income']: str(f1040_l1),
+            fields['l18b_combat_pay-0']: '0',
+            fields['l19_l18a_isBigger_2500']:str(f1040_l1 - 2500),
+            fields['L20_mult_l19_by_0.15']:str((f1040_l1 - 2500)*0.15),
+            fields['l21_medicare-0']: '0',
+            fields['l22_s1l15-0']: '0',
+            fields['l23_add_l22_21-0']: '0',
+            fields['l24_2040L27-0']: '0',
+            fields['l25_sub_l23_l24-0']: '0',
+            fields['l26_bigger_l20_l25-l20']: str((f1040_l1 - 2500)*0.15),
+            fields['l27_smaller_l26_l17-l17']: str(l16b),
+
         })
 
 #Additional child-tax-credit
