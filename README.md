@@ -1,7 +1,8 @@
 # 1040_AutoScript
 
-#2022 - get ready!
-Auto script filler for 1040 froms. 
+### 2022 - get ready!
+Auto script filler for 1040 froms. Nowadays is only for 
+'Single-Married-Status'.
 
 
 #  How exactly it works?

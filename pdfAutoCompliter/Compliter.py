@@ -1,6 +1,6 @@
 from pypdf import PdfReader, PdfWriter
-import Schedules
 import Util
+from pdfAutoCompliter.Schedules import configObjToArray
 
 #totalincome is All incomes, includes capital gain
 totalIncome = 0
@@ -8,10 +8,16 @@ incomeTaxable = 0
 adjested = 0
 
 
+
+def collectDataFromConf (confPath):
+
+
+
 def reader():
 
+
     forms = ['1040']
-    calc   = Schedules.configObjToArray('CALC_DATA', '.editorconfig')
+    calc   = configObjToArray('CALC_DATA', '.editorconfig')
     fields = configObjToArray('FIELDS' , '.editorconfig')
     filler = configObjToArray('FILLER_DETAILS' , '.editorconfig')
     dependets = configObjToArray('DEPENDENCE', '.editorconfig')

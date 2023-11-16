@@ -129,7 +129,7 @@ def createFieldsFile (fileName):
                 output_stream.write('fields [\''+ i +'\'] : \n')
 
 
-fieldsDumper('C:\\Users\\aman\\PycharmProjects\\pdfAutoCompliter\\fields_forms\\f1040s8--2022.pdf' , True)
+fieldsDumper('C:\\Users\\aman\\Documents\\GitHub\\1040_AutoScript\pdfAutoCompliter\\f1040.pdf' , True)
 #C:\\Users\\aman\\Documents\\IRS\\2022\\f1116_2022.pdf
 # C:\Users\aman\PycharmProjects\pdfAutoCompliter\fields_forms\f1040s8--2022.pdf
 # createFieldsFile('C:\\Users\\aman\\PycharmProjects\\pdfAutoCompliter\\fields_forms\\f1040s8--2022.pdf')

@@ -1,6 +1,7 @@
 import configparser
 import re
 from pypdf import PdfReader, PdfWriter
+import Compliter
 
 def configObjToArray (option , file):
     #   CREATE OBJECT
@@ -28,7 +29,7 @@ def f8812 (schedulePath, scheduleFields ,f1040_l1 , f1040_l11 ,f1040_l18_tax ,s3
     data   = configObjToArray('CALC_DATA' , '.\\.editconfig')
     personal_data = configObjToArray('FILLER_DETAILS', '.\\.editconfig')
 
-    reader = PdfReader(' C:\\Users\\aman\\Documents\\IRS\\2022\\f1040s1.pdf')
+    reader = PdfReader(schedulePath)
     writer = PdfWriter()
     writer.append(reader)
 
@@ -64,14 +65,9 @@ def f8812 (schedulePath, scheduleFields ,f1040_l1 , f1040_l11 ,f1040_l18_tax ,s3
             fields['l24_2040L27-0']: '0',
             fields['l25_sub_l23_l24-0']: '0',
             fields['l26_bigger_l20_l25-l20']: str((f1040_l1 - 2500)*0.15),
-            fields['l27_smaller_l26_l17-l17']: str(l16b),
+            fields['l27_smaller_l26_l17-l17']: str(l16b)
 
-        })
-
-#Additional child-tax-credit
-def sched_3 ():
-    x=1
-    return x
+            })
 
 
 '''
@@ -148,9 +144,9 @@ def calcTax(qualifiedDivindends, amountTaxtable, sched_D_smaller_l15_or_16):
     return l25
 
 
-def getTaxFromTable(amount):
+def getTaxFromTable(amount, ppInIstructionTable):
     # TODO For future developing make the table automatically
-    a = input("Look tax table in instruction in 1040ins p.p._63_ for :> " + amount)
+    a = input('Look tax table in instruction in 1040ins '+ ppInIstructionTable + ' :> ' + amount)
     return a
 
 
@@ -229,11 +225,10 @@ line 8 - put in 1040 l_20
 '''
 def schedule_3(schedulePath, scheduleFields, _1116amount):
 
-    scheduleFieldsPath = "C:\\Users\\aman\\PycharmProjects\\pdfAutoCompliter\\fields_forms\\f1040s3_fields_f"
     fields = configObjToArray('FIELDS', scheduleFields)
 
     personal_data = configObjToArray('FILLER_DETAILS', '.\\.editconfig')
-    reader = PdfReader(scheduleFieldsPath)
+    reader = PdfReader(schedulePath)
     writer = PdfWriter()
     writer.append(reader)
 
@@ -295,14 +290,14 @@ def doCalcs(wages, dividends, short_term_gain, long_term_gain, other_income, sta
 
 # other income - DMEI LIYDA
 # 'C:\\Users\\aman\\PycharmProjects\\pdfAutoCompliter\\fields_forms\\schedule1_fields'
-def sched_1(schedulePath, scheduleFields ,reason='PAYMENTS INSTEAD OF SALARY DURING BIRTH-VACATION'):
+def schedule_1(schedulePath, scheduleFields ,reason='PAYMENTS INSTEAD OF SALARY DURING BIRTH-VACATION'):
     fields = configObjToArray('FIELDS',
                               scheduleFields)
 
     data = configObjToArray('CALC_DATA', '.\\.editconfig')
     personal_data = configObjToArray('FILLER_DETAILS', '.\\.editconfig')
 
-    reader = PdfReader(' C:\\Users\\aman\\Documents\\IRS\\2022\\f1040s1.pdf')
+    reader = PdfReader(schedulePath)
     writer = PdfWriter()
     writer.append(reader)
     writer.update_page_form_field_values(
