@@ -16,17 +16,17 @@ def configObjToArray (option , file):
 
 
 
-def f8812 (schedulePath, scheduleFields ,f1040_l1 , f1040_l11 ,f1040_l18_tax ,s3_l1_1116 ,dependancesNum):
+def f8812 (schedulePath, scheduleFields ,f1040_l1 , f1040_l11 ,f1040_l18_tax ,s3_l1_1116 ,dependancesNum, conf='.\\.editconfig'):
 
     childCredit = 2000
     additionalChildCredit = 1500
     otherStatuses=200000
-    workSheetA = f1040_l18_tax - s3_l1_1116
+    workSheetA = f1040_l18_tax - s3_l1_1116   #Tax there - Tax here
     l5=dependancesNum*childCredit
     l16b = dependancesNum*additionalChildCredit
 
-    fields = configObjToArray('FIELDS' , 'C:\\Users\\aman\\PycharmProjects\\pdfAutoCompliter\\fields_forms\\schedule1_fields')
-    data   = configObjToArray('CALC_DATA' , '.\\.editconfig')
+    fields = configObjToArray('FIELDS' , scheduleFields)
+    data   = configObjToArray('CALC_DATA' , conf)
     personal_data = configObjToArray('FILLER_DETAILS', '.\\.editconfig')
 
     reader = PdfReader(schedulePath)
@@ -77,7 +77,20 @@ def f8812 (schedulePath, scheduleFields ,f1040_l1 , f1040_l11 ,f1040_l18_tax ,s3
 
 :return 1040 tax amount to entry space
 '''
-def calcTax(qualifiedDivindends, amountTaxtable, sched_D_smaller_l15_or_16):
+def calcTax(amountTaxtable, conf = '.\\.editconfig'):
+
+    short_term = configObjToArray('SHORT_TERM', conf)
+    long_term = configObjToArray('LONG_TERM', conf)
+    dividents = configObjToArray('DIVIDENDS', conf)
+    qualifiedDivindends =int( dividents['qualified_dividend'])
+    sched_D_smaller_l15_or_16 = int(long_term['realized_gain'])
+
+    if sched_D_smaller_l15_or_16 <= 0 and qualifiedDivindends <=0 :
+        return getTaxFromTable(amountTaxtable , '61')
+
+    if  int(short_term['realized_gain']) < sched_D_smaller_l15_or_16:
+        sched_D_smaller_l15_or_16=int(short_term['realized_gain'])
+
     l4 = qualifiedDivindends + sched_D_smaller_l15_or_16  # line4
     l5 = amountTaxtable - l4
     if l5 > 0:
@@ -116,7 +129,7 @@ def calcTax(qualifiedDivindends, amountTaxtable, sched_D_smaller_l15_or_16):
     if l23 > l24:
         l25 = l24
 
-    with open('.\\Worksheet_qualified_dividnends_and_capital_gain_tax_output', 'w') as file:
+    with open('.\\Worksheet_qualified_dividnends_and_capital_gain_tax_output.txt', 'w') as file:
         file.write('Line        |       value       \n')
         file.write('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n')
         file.write('1           |       ' + amountTaxtable + '  \n')
@@ -141,6 +154,7 @@ def calcTax(qualifiedDivindends, amountTaxtable, sched_D_smaller_l15_or_16):
         file.write('24          |       ' + l24 + '       \n')
         file.write('25          |       ' + l25 + '       \n')
 
+    print('Created summerized file : Worksheet_qualified_dividnends_and_capital_gain_tax_output.txt')
     return l25
 
 
@@ -150,10 +164,11 @@ def getTaxFromTable(amount, ppInIstructionTable):
     return a
 
 
-def form_1116(schedulePath, scheduleFields, f1040_l15_taxtableAmount, f1040_l16_tax):
+def form_1116(schedulePath, scheduleFields, schedule3Path, schedule3Fields, f1040_l15_taxtableAmount, f1040_l16_tax , conf = '.\\.editconfig'):
+
+    data = configObjToArray('CALC_DATA', conf)
     fields = configObjToArray('FIELDS', scheduleFields)
-    data = configObjToArray('CALC_DATA', '.\\.editconfig')
-    personal_data = configObjToArray('FILLER_DETAILS', '.\\.editconfig')
+    personal_data = configObjToArray('FILLER_DETAILS',conf)
 
     usd = float(data['ILS_USD_rate'])
     salary_usd = float(data['salary_in_ILS']) / usd
@@ -218,7 +233,8 @@ def form_1116(schedulePath, scheduleFields, f1040_l15_taxtableAmount, f1040_l16_
             fields['sum_to_1040_schedule_3_l2']: str(l24)
 
         })
-    schedule_3(l24)
+    schedule_3(schedule3Path, schedule3Fields ,l24)
+    return l24
 
 '''
 line 8 - put in 1040 l_20
@@ -242,13 +258,13 @@ def schedule_3(schedulePath, scheduleFields, _1116amount):
 
 
 # schedule D
-def capitalGain(schedulePath, scheduleFields):
+def capitalGain(schedulePath, scheduleFields, conf =  '.\\.editconfig'):
     fields = configObjToArray('FIELDS', scheduleFields)
 
-    data = configObjToArray('CALC_DATA', '.\\.editconfig')
-    personal_data = configObjToArray('FILLER_DETAILS', '.\\.editconfig')
-    short_terms = configObjToArray('SHORT_TERM', '.\\.editconfig')
-    long_term = configObjToArray('LONG_TERM', '.\\.editorconfig')
+    data = configObjToArray('CALC_DATA', conf)
+    personal_data = configObjToArray('FILLER_DETAILS', conf)
+    short_terms = configObjToArray('SHORT_TERM', conf)
+    long_term = configObjToArray('LONG_TERM', conf)
 
     totalGainShort = int(short_terms['realized_gain']) - int(short_terms['loss_carry_over'])
     totalGainLong = int(long_term['realized_gain']) - int(long_term['loss_carry_over'])
@@ -280,21 +296,20 @@ def capitalGain(schedulePath, scheduleFields):
     return totalShortAndLong
 
 
-#                   line 3b   |-------------line 7---------|  line 8
-def doCalcs(wages, dividends, short_term_gain, long_term_gain, other_income, standartDeduction):
-    totalIncome = wages + dividends + short_term_gain + long_term_gain + other_income  # sched. 1
-    incomeTaxable = totalIncome - standartDeduction
-
-    return str(totalIncome)
-
-
 # other income - DMEI LIYDA
 # 'C:\\Users\\aman\\PycharmProjects\\pdfAutoCompliter\\fields_forms\\schedule1_fields'
 def schedule_1(schedulePath, scheduleFields ,reason='PAYMENTS INSTEAD OF SALARY DURING BIRTH-VACATION'):
-    fields = configObjToArray('FIELDS',
-                              scheduleFields)
 
     data = configObjToArray('CALC_DATA', '.\\.editconfig')
+    if not data['dmei_liyda'].isnumeric():
+        print('Error in file: '+schedulePath+ ': Dmei-lyda is not recognized value')
+        return
+
+    if  data['dmei_liyda'].isnumeric() and int(data['dmei_liyda']) <= 0 :
+        return 0
+
+
+    fields = configObjToArray('FIELDS', scheduleFields)
     personal_data = configObjToArray('FILLER_DETAILS', '.\\.editconfig')
 
     reader = PdfReader(schedulePath)
@@ -310,3 +325,4 @@ def schedule_1(schedulePath, scheduleFields ,reason='PAYMENTS INSTEAD OF SALARY 
             fields['total_income']: data['dmei_liyda'],
             fields['sum']: data['dmei_liyda']})
 
+    return int (data['dmei_liyda'])
