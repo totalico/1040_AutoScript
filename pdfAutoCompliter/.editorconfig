@@ -23,7 +23,7 @@ form_8812=   name:f1040s8--2022.pdf          , fieldsFile: f1040s8--2022_f
 form_1116=  name:f1116_2022.pdf              , fieldsFile :f1116_2022_fields_f
 
 [DIRS]
-pdfs = '.\Pdfs'
+pdfs = '.\PDFs'
 fields_forms = '.\Fields'
 
 [FILLER_DETAILS]
@@ -38,7 +38,6 @@ city=PETACH-TIQUA
 apt=8
 country=ISREAL
 zip=4974447
-
 #max 9 digits
 rout=1111111
 #max 17 digits

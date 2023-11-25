@@ -54,8 +54,8 @@ def reader():
     # this line is bifore l19, due i need l20 to b in l19
     l20 = form_1116 (pdfs['form_1116']['name'] , pdfs['form_1116']['fieldsFile'],pdfs['schedule3']['name'] , pdfs['schedule3']['fieldsFile'],
                    l15, l16 )
-    l19 = f8812(pdfs['schedleD']['name'] , pdfs['schedleD']['fieldsFile'], l1a , l11,l18, l20  , len(dependets))#Suppose to b after s3
-
+    f8812_re = f8812(pdfs['schedleD']['name'] , pdfs['schedleD']['fieldsFile'], l1a , l11,l18, l20  , len(dependets))#Suppose to b after s3
+    l19 = f8812_re['l19']
     l21 = l19 + l20
     l22 = l18 - l21
     if l22 < 0:
@@ -69,7 +69,21 @@ def reader():
     l25d = 0
     l26 =  0
     l27 =  0
-    l28 =
+    l28 = f8812_re['l28']
+    l29= 0
+    #l30  - reserved for future use
+    l31_s3l15= 0
+    l32= l27+ l28+ l29+ l31_s3l15
+    l33 = l25d+ l26+ l32
+    l34 = 0
+    if l33 > l24:
+        l34=l33-l24
+    l35 = l34 #amount to be refunded
+    l36 = 0
+    l37 = l24 - l33
+    if l37 < 0:
+        l37 = 0
+    l38 = 0
 
     reader = PdfReader('f1040.pdf')
     writer = PdfWriter()
@@ -97,47 +111,47 @@ def reader():
                                 fields['qualified_dividends']:str(l3a),
                                 fields['ordinary_dividends'] : str(l3b),
                                 fields['capital_gain']:str(l7),
-                                fields['total_income']:doCalcs(int(calc['salary']),int (dividends['ordinary_dividend']), int(short_term['realized_gain']) ,long_term['realized_gain'] ,int(calc['standard_deduction'])),
-                                fields['total_adjusted']:str(totalIncome),
-                                fields['total_income_adjusted']:str(totalIncome),
-                                fields['standard_deduction']:calc['standard_deduction'],
-                                fields['total_dedction']:calc['standard_deduction'],
-                                fields['taxable_income']:str(incomeTaxable),
-        })
+                                fields['total_income']:str (l9)
+                                fields['total_adjusted']:str(l10),
+                                fields['total_income_adjusted']:str(l11),
+                                fields['standard_deduction']:str(l12),
+                                fields['total_dedction']:str(l14),
+                                fields['taxable_income']:str(l15)
+                         })
 
-                    writer.update_page_form_field_values(
+    writer.update_page_form_field_values(
                         writer.pages[1], {
-                                fields['l16_tax']:
-                                fields['l17_amount_s2l3-0']:
-                                fields['l18_add_l16_l17']:
-                                fields['l19_childTaxCredit_8812l19-0']:
-                                fields['l20_amount_s3l8-0']:
-                                fields['l21_add_l20_l19']:
-                                fields['l22_l18_sub_l21']:
-                                fields['l23_otherTaxes_s2l21-0']:
-                                fields['l24_add_22_23']:
-                                fields['l25a_federalIncome_w2-0']:
-                                fields['l25b_federalIncome_1099-0']:
-                                fields['l25c_other_forms-0']:
-                                fields['l25d_total_a-c-0']:
-                                fields['l26_estimated_2021_return_overpaid-0']:
-                                fields['l27_EIC-0']:
-                                fields['l28_aditional_childTaxCredit_8812l27']:
-                                fields['l29_american_oppornunity-0']:
-                                fields['l31_amount_s3l15-0']:
-                                fields['l32_add_ll27_l28_l29_l31-l28']:
-                                fields['l33_totalPayments_add_l25b_l26_l32']:
-                                fields['l34_l33_isBigger_l24_sub_l33_l24']:
-                                fields['l35a_amount_to_refound']:
-                                fields['l35b_routing']:
-                                fields['l35d_account']:
-                                fields['l36_sum_to_applied_in_2023-0']:
-                                fields['l37_l24_sub_l33-0']:
-                                fields['l38_estimated_tax_penalty-0']:
-                                fields['occupation']:
-                                fields['phone']:
-                                fields['email']:
-                                   })
+                                fields['l16_tax']:str(l16),
+                                fields['l17_amount_s2l3-0']:str(l17),
+                                fields['l18_add_l16_l17']:str(l18),
+                                fields['l19_childTaxCredit_8812l19-0']:str(l19),
+                                fields['l20_amount_s3l8-0']:str(l20),
+                                fields['l21_add_l20_l19']:str(l21),
+                                fields['l22_l18_sub_l21']:str(l22),
+                                fields['l23_otherTaxes_s2l21-0']:str(l23),
+                                fields['l24_add_22_23']:str(l24),
+                                fields['l25a_federalIncome_w2-0']:str(l25a),
+                                fields['l25b_federalIncome_1099-0']:str(l25b),
+                                fields['l25c_other_forms-0']:str(l25c),
+                                fields['l25d_total_a-c-0']:str(l25d),
+                                fields['l26_estimated_2021_return_overpaid-0']:str(l26),
+                                fields['l27_EIC-0']:str(l27),
+                                fields['l28_aditional_childTaxCredit_8812l27']:str(l28),
+                                fields['l29_american_oppornunity-0']:str(l29),
+                                fields['l31_amount_s3l15-0']:str(l31_s3l15),
+                                fields['l32_add_ll27_l28_l29_l31-l28']:str(l32),
+                                fields['l33_totalPayments_add_l25b_l26_l32']:str(l33),
+                                fields['l34_l33_isBigger_l24_sub_l33_l24']:str(l34),
+                                fields['l35a_amount_to_refound']:str(l35),
+                                fields['l35b_routing']:filler['rout'] ,
+                                fields['l35d_account']:filler['account'],
+                                fields['l36_sum_to_applied_in_2023-0']:str(l36),
+                                fields['l37_l24_sub_l33-0']:str(l37),
+                                fields['l38_estimated_tax_penalty-0']:str(l38),
+                                fields['occupation']:filler['occupation'],
+                                fields['phone']:filler['phone'],
+                                fields['email']:filler['email'],
+            } )
 
     with open("declarations.txt", "w") as declarations:
         declarations.write('===========     ILS/DOLLAR RATE   ============\n\n')
@@ -160,14 +174,7 @@ def reader():
 
         j+=1
     declarations.close()
-    # writer.update_page_form_field_values(
-    #     writer.pages[1], {
-    #     fields['rout_num']:filler['rout'],
-    #     fields['phone']:filler['phone'],
-    #     fields['email']: filler['email'],
-    #     fields['occupation']: filler['occupation'],
-    #     fields['account_num']: filler['account']
-    #     })
+    
     with open("declarations.txt", "a") as declarations:
         declarations.write('\n\n\n\n\n\n===========     ADDED FORMS     =================\n\n')
         for i in forms:

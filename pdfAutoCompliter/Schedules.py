@@ -29,6 +29,25 @@ def f8812 (schedulePath, scheduleFields ,f1040_l1 , f1040_l11 ,f1040_l18_tax ,s3
     data   = configObjToArray('CALC_DATA' , conf)
     personal_data = configObjToArray('FILLER_DETAILS', '.\\.editconfig')
 
+    result = {}
+    l13 = workSheetA
+    _1040_l19=workSheetA
+    if workSheetA > l5:
+        _1040_l19= l5
+    result['l19']= _1040_l19
+    l16a = l5 - _1040_l19
+    l17 = l16a
+    if l16a > l16b:
+        l17 = l16b
+    l18a = f1040_l1
+    l19 = l18a-2500
+    l20 = l19*0.15
+    l25 = 0
+    l26 =l20
+    l27 = l26
+    result['l28']= l27
+
+
     reader = PdfReader(schedulePath)
     writer = PdfWriter()
     writer.append(reader)
@@ -54,21 +73,21 @@ def f8812 (schedulePath, scheduleFields ,f1040_l1 , f1040_l11 ,f1040_l18_tax ,s3
             fields['l16a_sub_l12_l14']:  str(l5), #as l8
             fields['l16b1_num_children']: str(dependancesNum),
             fields['l16b2_l16b1*1500']: str(l16b),
-            fields['l17_smaller_l16a_l16b2']: str(l16b), #nowadays cannot be otherwise
-            fields['l18a_earned_income']: str(f1040_l1),
+            fields['l17_smaller_l16a_l16b2']: str(l17), #nowadays cannot be otherwise
+            fields['l18a_earned_income']: str(l18a),
             fields['l18b_combat_pay-0']: '0',
-            fields['l19_l18a_isBigger_2500']:str(f1040_l1 - 2500),
-            fields['L20_mult_l19_by_0.15']:str((f1040_l1 - 2500)*0.15),
+            fields['l19_l18a_isBigger_2500']:str(l19),
+            fields['L20_mult_l19_by_0.15']:str(l20),
             fields['l21_medicare-0']: '0',
             fields['l22_s1l15-0']: '0',
             fields['l23_add_l22_21-0']: '0',
             fields['l24_2040L27-0']: '0',
-            fields['l25_sub_l23_l24-0']: '0',
-            fields['l26_bigger_l20_l25-l20']: str((f1040_l1 - 2500)*0.15),
-            fields['l27_smaller_l26_l17-l17']: str(l16b)
+            fields['l25_sub_l23_l24-0']: str(l25),
+            fields['l26_bigger_l20_l25-l20']: str(l26),
+            fields['l27_smaller_l26_l17-l17']: str(l27)
 
             })
-
+    return result
 
 '''
 @qualifiedDivindends = line 3a
@@ -77,7 +96,7 @@ def f8812 (schedulePath, scheduleFields ,f1040_l1 , f1040_l11 ,f1040_l18_tax ,s3
 
 :return 1040 tax amount to entry space
 '''
-def calcTax(amountTaxtable, conf = '.\\.editconfig'):
+def calcTax(amountTaxtable_104l15, conf ='.\\.editconfig'):
 
     short_term = configObjToArray('SHORT_TERM', conf)
     long_term = configObjToArray('LONG_TERM', conf)
@@ -86,31 +105,31 @@ def calcTax(amountTaxtable, conf = '.\\.editconfig'):
     sched_D_smaller_l15_or_16 = int(long_term['realized_gain'])
 
     if sched_D_smaller_l15_or_16 <= 0 and qualifiedDivindends <=0 :
-        return getTaxFromTable(amountTaxtable , '61')
+        return getTaxFromTable(amountTaxtable_104l15, '61')
 
     if  int(short_term['realized_gain']) < sched_D_smaller_l15_or_16:
         sched_D_smaller_l15_or_16=int(short_term['realized_gain'])
 
     l4 = qualifiedDivindends + sched_D_smaller_l15_or_16  # line4
-    l5 = amountTaxtable - l4
+    l5 = amountTaxtable_104l15 - l4
     if l5 > 0:
         l5 = 0
     headOfHousehold = 55800
     l7 = headOfHousehold
-    if amountTaxtable < headOfHousehold:
-        l7 = amountTaxtable
+    if amountTaxtable_104l15 < headOfHousehold:
+        l7 = amountTaxtable_104l15
     l8 = l5
     if l7 < l5:
         l8 = l7
     l9 = l7 - l8
-    l10 = amountTaxtable
-    if l4 < amountTaxtable:
+    l10 = amountTaxtable_104l15
+    if l4 < amountTaxtable_104l15:
         l10 = l4
     l12 = l10 - l9
     l13 = 488300
-    l14 = amountTaxtable
-    if l13 < amountTaxtable:
-        l14 = amountTaxtable
+    l14 = amountTaxtable_104l15
+    if l13 < amountTaxtable_104l15:
+        l14 = amountTaxtable_104l15
     l15 = l5 + l9
     l16 = l14 - l15
     if l16 < 0:
@@ -124,7 +143,7 @@ def calcTax(amountTaxtable, conf = '.\\.editconfig'):
     l21 = l20 * 0.20
     l22 = getTaxFromTable(l5)
     l23 = l18 + l21 + l22
-    l24 = getTaxFromTable(amountTaxtable)
+    l24 = getTaxFromTable(amountTaxtable_104l15)
     l25 = l24
     if l23 > l24:
         l25 = l24
@@ -132,7 +151,7 @@ def calcTax(amountTaxtable, conf = '.\\.editconfig'):
     with open('.\\Worksheet_qualified_dividnends_and_capital_gain_tax_output.txt', 'w') as file:
         file.write('Line        |       value       \n')
         file.write('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n')
-        file.write('1           |       ' + amountTaxtable + '  \n')
+        file.write('1           |       ' + amountTaxtable_104l15 + '  \n')
         file.write('4           |       ' + l4 + '       \n')
         file.write('5           |       ' + l5 + '       \n')
         file.write('7           |       ' + l7 + '       \n')
@@ -270,6 +289,9 @@ def capitalGain(schedulePath, scheduleFields, conf =  '.\\.editconfig'):
     totalGainLong = int(long_term['realized_gain']) - int(long_term['loss_carry_over'])
     totalShortAndLong = totalGainLong + totalGainShort
 
+    if totalShortAndLong = 0:
+        print('No need in sced. D, No gain.)
+              return 0
     reader = PdfReader(schedulePath)
     writer = PdfWriter()
     writer.append(reader)
@@ -306,6 +328,7 @@ def schedule_1(schedulePath, scheduleFields ,reason='PAYMENTS INSTEAD OF SALARY 
         return
 
     if  data['dmei_liyda'].isnumeric() and int(data['dmei_liyda']) <= 0 :
+        print('Dmei-Lyda is 0.')
         return 0
 
 
