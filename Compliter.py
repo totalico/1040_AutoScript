@@ -1,16 +1,13 @@
 from pypdf import PdfReader, PdfWriter
 
 import Util
-import Schedules# capitalGain, schedule_1
-from Schedules import schedule_1, capitalGain , f8812, form_1116, calcTax
+from Schedules import form_1116, calcTax, f8812, capitalGain, schedule_1
 from Util import configObjToArray
 
 
-
-
-def pdf (confPath = '.editconfig'):
+def pdf (option , confPath = '.editconfig'):
     c ={}
-    a = configObjToArray('PDF_FORMS', confPath)
+    a = Util.configObjToArray(option , confPath) # a = {sch , dsdssaas}
     for i in a:
         c[i] = Util.extractArrFromStringConfigFile(a[i])
 
@@ -18,20 +15,20 @@ def pdf (confPath = '.editconfig'):
     return c
 
 
-pdfs = pdf()
 
+pdfs = pdf('PDF_FORMS')
+dirs = configObjToArray('DIRS','.editconfig' )
+print(dirs)
 
 def reader():
 
-
-    forms = ['1040']
-    calc   = configObjToArray('CALC_DATA', '.editorconfig')
-    fields = configObjToArray('FIELDS' , '.editorconfig')
-    filler = configObjToArray('FILLER_DETAILS' , '.editorconfig')
-    dependets = configObjToArray('DEPENDENCE', '.editorconfig')
-    dividends = configObjToArray('DIVIDENDS','.editorconfig')
-    short_term= configObjToArray('SHORT_TERM' , '.editorconfig')
-    long_term= configObjToArray('LONG_TERM' , '.editorconfig')
+    calc   = configObjToArray('CALC_DATA', '.editconfig')
+    fields = configObjToArray('FIELDS', pdfs['1040']['fieldsFile'])
+    filler = configObjToArray('FILLER_DETAILS', '.editconfig')
+    dependets = configObjToArray('DEPENDENCE', '.editconfig')
+    dividends = configObjToArray('DIVIDENDS', '.editconfig')
+    short_term= configObjToArray('SHORT_TERM', '.editconfig')
+    long_term= configObjToArray('LONG_TERM', '.editconfig')
 
     dependetsArr = {}
     for i in dependets:
@@ -44,7 +41,7 @@ def reader():
     l1h =calc['salary']
     l3a = dividends['qualified_dividend']
     l3b = dividends['ordinary_dividend']
-    l7 = capitalGain(pdfs['schedleD']['name'], pdfs['schedleD']['fieldsFile'])
+    l7 = capitalGain(pdfs['schedleD']['name'] , pdfs['schedleD']['fieldsFile'])
     l8 = schedule_1(pdfs['schedle1']['name'] , pdfs['schedle1']['fieldsFile'])
     l9 = l1a+l3b+l7+l8
     l10 = 0 #adjestmnets
@@ -189,4 +186,6 @@ def reader():
     with open("filled-out.pdf", "wb") as output_stream:
         writer.write(output_stream)
 
-pdf('.editconfig')
+# reader()
+
+print( dirs['fields_forms'] +pdfs['1040']['fieldsFile'])

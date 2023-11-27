@@ -2,7 +2,6 @@ import configparser
 import re
 from pypdf import PdfReader
 
-
 def configObjToArray (option , file):
     #   CREATE OBJECT
     arr = {}

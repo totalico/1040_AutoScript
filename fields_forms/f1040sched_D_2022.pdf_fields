@@ -1,0 +1,70 @@
+topmostSubform[0].Page1[0].f1_01[0]                              :name
+topmostSubform[0].Page1[0].f1_02[0]                              :ssn
+topmostSubform[0].Page1[0].c1_1[0]
+topmostSubform[0].Page1[0].c1_1[1]
+topmostSubform[0].Page1[0].Table_PartI[0].Row1a[0].f1_03[0]     : proceed_short_term #line 1a
+topmostSubform[0].Page1[0].Table_PartI[0].Row1a[0].f1_04[0]     :cost_short_term(basis)
+topmostSubform[0].Page1[0].Table_PartI[0].Row1a[0].f1_05_RO[0]  #?
+topmostSubform[0].Page1[0].Table_PartI[0].Row1a[0].f1_06[0]     :gain_short_term
+topmostSubform[0].Page1[0].Table_PartI[0].Row1a[0]
+topmostSubform[0].Page1[0].Table_PartI[0].Row1b[0].f1_07[0]
+topmostSubform[0].Page1[0].Table_PartI[0].Row1b[0].f1_08[0]
+topmostSubform[0].Page1[0].Table_PartI[0].Row1b[0].f1_09[0]
+topmostSubform[0].Page1[0].Table_PartI[0].Row1b[0].f1_10[0]
+topmostSubform[0].Page1[0].Table_PartI[0].Row1b[0]
+topmostSubform[0].Page1[0].Table_PartI[0].Row2[0].f1_11[0]
+topmostSubform[0].Page1[0].Table_PartI[0].Row2[0].f1_12[0]
+topmostSubform[0].Page1[0].Table_PartI[0].Row2[0].f1_13[0]
+topmostSubform[0].Page1[0].Table_PartI[0].Row2[0].f1_14[0]
+topmostSubform[0].Page1[0].Table_PartI[0].Row2[0]
+topmostSubform[0].Page1[0].Table_PartI[0].Row3[0].f1_15[0]
+topmostSubform[0].Page1[0].Table_PartI[0].Row3[0].f1_16[0]
+topmostSubform[0].Page1[0].Table_PartI[0].Row3[0].f1_17[0]
+topmostSubform[0].Page1[0].Table_PartI[0].Row3[0].f1_18[0]
+topmostSubform[0].Page1[0].Table_PartI[0].Row3[0]
+topmostSubform[0].Page1[0].Table_PartI[0]
+topmostSubform[0].Page1[0].f1_19[0]
+topmostSubform[0].Page1[0].f1_20[0]
+topmostSubform[0].Page1[0].f1_21[0]         : loss_carryover  #line 6  - [if you have minus- in preior year]
+topmostSubform[0].Page1[0].f1_22[0]         : sum_gain_carryover  #line 7
+
+topmostSubform[0].Page1[0].Table_PartII[0].Row8a[0].f1_23[0]        :proceed_long_term  #line 8a
+topmostSubform[0].Page1[0].Table_PartII[0].Row8a[0].f1_24[0]        :cost_long_term
+topmostSubform[0].Page1[0].Table_PartII[0].Row8a[0].f1_25_RO[0]
+topmostSubform[0].Page1[0].Table_PartII[0].Row8a[0].f1_26[0]        :gain_long_term
+topmostSubform[0].Page1[0].Table_PartII[0].Row8a[0]
+topmostSubform[0].Page1[0].Table_PartII[0].Row8b[0].f1_27[0]
+topmostSubform[0].Page1[0].Table_PartII[0].Row8b[0].f1_28[0]
+topmostSubform[0].Page1[0].Table_PartII[0].Row8b[0].f1_29[0]
+topmostSubform[0].Page1[0].Table_PartII[0].Row8b[0].f1_30[0]
+topmostSubform[0].Page1[0].Table_PartII[0].Row8b[0]
+topmostSubform[0].Page1[0].Table_PartII[0].Row9[0].f1_31[0]
+topmostSubform[0].Page1[0].Table_PartII[0].Row9[0].f1_32[0]
+topmostSubform[0].Page1[0].Table_PartII[0].Row9[0].f1_33[0]
+topmostSubform[0].Page1[0].Table_PartII[0].Row9[0].f1_34[0]
+topmostSubform[0].Page1[0].Table_PartII[0].Row9[0]
+topmostSubform[0].Page1[0].Table_PartII[0].Row10[0].f1_35[0]
+topmostSubform[0].Page1[0].Table_PartII[0].Row10[0].f1_36[0]
+topmostSubform[0].Page1[0].Table_PartII[0].Row10[0].f1_37[0]
+topmostSubform[0].Page1[0].Table_PartII[0].Row10[0].f1_38[0]
+topmostSubform[0].Page1[0].Table_PartII[0].Row10[0]
+topmostSubform[0].Page1[0].Table_PartII[0]
+topmostSubform[0].Page1[0].f1_39[0]
+topmostSubform[0].Page1[0].f1_40[0]
+topmostSubform[0].Page1[0].f1_41[0]
+topmostSubform[0].Page1[0].f1_42[0]     :  long_term_carryover  #line14
+topmostSubform[0].Page1[0].f1_43[0]     : sum_long_term_gain #line 15 - losses carryover
+topmostSubform[0].Page1[0]
+topmostSubform[0].Page2[0].f2_01[0]     : sum_short_long #line 16 - line 15+line 7
+topmostSubform[0].Page2[0].c2_1[0]
+topmostSubform[0].Page2[0].c2_1[1]      #28% RATE WORKSHEET
+topmostSubform[0].Page2[0].f2_02[0]
+topmostSubform[0].Page2[0].f2_03[0]
+topmostSubform[0].Page2[0].c2_2[0]
+topmostSubform[0].Page2[0].c2_2[1]
+topmostSubform[0].Page2[0].TagCorrectingSubform[0].f2_04[0]
+topmostSubform[0].Page2[0].TagCorrectingSubform[0]
+topmostSubform[0].Page2[0].c2_3[0]
+topmostSubform[0].Page2[0].c2_3[1]
+topmostSubform[0].Page2[0]
+topmostSubform[0]

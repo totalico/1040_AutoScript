@@ -1,7 +1,7 @@
 import configparser
 import re
 from pypdf import PdfReader, PdfWriter
-import Compliter
+import Util
 
 def f8812 (schedulePath, scheduleFields ,f1040_l1 , f1040_l11 ,f1040_l18_tax ,s3_l1_1116 ,dependancesNum, conf='.\\.editconfig'):
 
@@ -12,7 +12,7 @@ def f8812 (schedulePath, scheduleFields ,f1040_l1 , f1040_l11 ,f1040_l18_tax ,s3
     l5=dependancesNum*childCredit
     l16b = dependancesNum*additionalChildCredit
 
-    fields = configObjToArray('FIELDS' , scheduleFields)
+    fields = Util.configObjToArray('FIELDS', scheduleFields)
     data   = configObjToArray('CALC_DATA' , conf)
     personal_data = configObjToArray('FILLER_DETAILS', '.\\.editconfig')
 

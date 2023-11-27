@@ -1,0 +1,153 @@
+topmostSubform[0].Page1[0].f1_1[0]          :name
+topmostSubform[0].Page1[0].f1_2[0]          :ssn
+topmostSubform[0].Page1[0].c1_1[0]
+topmostSubform[0].Page1[0].c1_1[1]
+topmostSubform[0].Page1[0].c1_1[2]
+topmostSubform[0].Page1[0].c1_1[3]
+topmostSubform[0].Page1[0].c1_1[4]
+topmostSubform[0].Page1[0].c1_1[5]
+topmostSubform[0].Page1[0].c1_1[6]
+topmostSubform[0].Page1[0].f1_3[0]
+topmostSubform[0].Page1[0].Part1Table[0].LineI[0].f1_4[0]     : country # ISRAEL
+topmostSubform[0].Page1[0].Part1Table[0].LineI[0].f1_5[0]
+topmostSubform[0].Page1[0].Part1Table[0].LineI[0].f1_6[0]
+topmostSubform[0].Page1[0].Part1Table[0].LineI[0]
+topmostSubform[0].Page1[0].Part1Table[0].Line1a[0].Line1a[0].f1_7[0] : income_reason #WAGES
+topmostSubform[0].Page1[0].Part1Table[0].Line1a[0].Line1a[0].f1_8[0]
+topmostSubform[0].Page1[0].Part1Table[0].Line1a[0].Line1a[0].f1_9[0]
+topmostSubform[0].Page1[0].Part1Table[0].Line1a[0].Line1a[0]
+topmostSubform[0].Page1[0].Part1Table[0].Line1a[0].Line1aColA[0].f1_10[0]  :income_sum
+topmostSubform[0].Page1[0].Part1Table[0].Line1a[0].Line1aColA[0]
+topmostSubform[0].Page1[0].Part1Table[0].Line1a[0].Line1aColB[0].f1_11[0]
+topmostSubform[0].Page1[0].Part1Table[0].Line1a[0].Line1aColB[0]
+topmostSubform[0].Page1[0].Part1Table[0].Line1a[0].Line1aColC[0].f1_12[0]
+topmostSubform[0].Page1[0].Part1Table[0].Line1a[0].Line1aColC[0]
+topmostSubform[0].Page1[0].Part1Table[0].Line1a[0].Ln1aTotal[0].f1_13[0]   :total_income_sum
+topmostSubform[0].Page1[0].Part1Table[0].Line1a[0].Ln1aTotal[0]
+topmostSubform[0].Page1[0].Part1Table[0].Line1a[0]
+topmostSubform[0].Page1[0].Part1Table[0].Line1b[0].Line1BText[0].c1_2[0]
+topmostSubform[0].Page1[0].Part1Table[0].Line1b[0].Line1BText[0]
+topmostSubform[0].Page1[0].Part1Table[0].Line1b[0]
+topmostSubform[0].Page1[0].Part1Table[0].Line2[0].f1_14[0]
+topmostSubform[0].Page1[0].Part1Table[0].Line2[0].f1_15[0]
+topmostSubform[0].Page1[0].Part1Table[0].Line2[0].f1_16[0]
+topmostSubform[0].Page1[0].Part1Table[0].Line2[0]
+topmostSubform[0].Page1[0].Part1Table[0].Line3a[0].f1_17[0]    :itimazed_deduction
+topmostSubform[0].Page1[0].Part1Table[0].Line3a[0].f1_18[0]
+topmostSubform[0].Page1[0].Part1Table[0].Line3a[0].f1_19[0]
+topmostSubform[0].Page1[0].Part1Table[0].Line3a[0]
+topmostSubform[0].Page1[0].Part1Table[0].Line3b[0].f1_20[0]
+topmostSubform[0].Page1[0].Part1Table[0].Line3b[0].f1_21[0]
+topmostSubform[0].Page1[0].Part1Table[0].Line3b[0].f1_22[0]
+topmostSubform[0].Page1[0].Part1Table[0].Line3b[0]
+topmostSubform[0].Page1[0].Part1Table[0].Line3c[0].f1_23[0]     :sum_deduction
+topmostSubform[0].Page1[0].Part1Table[0].Line3c[0].f1_24[0]
+topmostSubform[0].Page1[0].Part1Table[0].Line3c[0].f1_25[0]
+topmostSubform[0].Page1[0].Part1Table[0].Line3c[0]
+topmostSubform[0].Page1[0].Part1Table[0].Line3d[0].f1_26[0]         : gross_income
+topmostSubform[0].Page1[0].Part1Table[0].Line3d[0].f1_27[0]
+topmostSubform[0].Page1[0].Part1Table[0].Line3d[0].f1_28[0]
+topmostSubform[0].Page1[0].Part1Table[0].Line3d[0]
+topmostSubform[0].Page1[0].Part1Table[0].Line3e[0].f1_29[0]     :gross_income_all_sources # Usually as line d
+topmostSubform[0].Page1[0].Part1Table[0].Line3e[0].f1_30[0]
+topmostSubform[0].Page1[0].Part1Table[0].Line3e[0].f1_31[0]
+topmostSubform[0].Page1[0].Part1Table[0].Line3e[0]
+topmostSubform[0].Page1[0].Part1Table[0].Line3f[0].f1_32[0]         :divide_e_by_d #Usually is 1
+topmostSubform[0].Page1[0].Part1Table[0].Line3f[0].f1_33[0]
+topmostSubform[0].Page1[0].Part1Table[0].Line3f[0].f1_34[0]
+topmostSubform[0].Page1[0].Part1Table[0].Line3f[0]
+topmostSubform[0].Page1[0].Part1Table[0].Line3g[0].f1_35[0]         :mult_f_by_c # Usually is c
+topmostSubform[0].Page1[0].Part1Table[0].Line3g[0].f1_36[0]
+topmostSubform[0].Page1[0].Part1Table[0].Line3g[0].f1_37[0]
+topmostSubform[0].Page1[0].Part1Table[0].Line3g[0]
+topmostSubform[0].Page1[0].Part1Table[0].Line4a[0].f1_38[0]
+topmostSubform[0].Page1[0].Part1Table[0].Line4a[0].f1_39[0]
+topmostSubform[0].Page1[0].Part1Table[0].Line4a[0].f1_40[0]
+topmostSubform[0].Page1[0].Part1Table[0].Line4a[0]
+topmostSubform[0].Page1[0].Part1Table[0].Line4b[0].f1_41[0]
+topmostSubform[0].Page1[0].Part1Table[0].Line4b[0].f1_42[0]
+topmostSubform[0].Page1[0].Part1Table[0].Line4b[0].f1_43[0]
+topmostSubform[0].Page1[0].Part1Table[0].Line4b[0]
+topmostSubform[0].Page1[0].Part1Table[0].Line5[0].f1_44[0]
+topmostSubform[0].Page1[0].Part1Table[0].Line5[0].f1_45[0]
+topmostSubform[0].Page1[0].Part1Table[0].Line5[0].f1_46[0]
+topmostSubform[0].Page1[0].Part1Table[0].Line5[0]
+topmostSubform[0].Page1[0].Part1Table[0].Line6[0].f1_47[0]      :deduction_from_all # Usually is 3c
+topmostSubform[0].Page1[0].Part1Table[0].Line6[0].f1_48[0]
+topmostSubform[0].Page1[0].Part1Table[0].Line6[0].f1_49[0]
+topmostSubform[0].Page1[0].Part1Table[0].Line6[0].f1_50[0]       :deduction_from_all_sum # Usually is 3c
+topmostSubform[0].Page1[0].Part1Table[0].Line6[0]
+topmostSubform[0].Page1[0].Part1Table[0]
+topmostSubform[0].Page1[0].f1_51[0]                             :wage_sub_deduction
+topmostSubform[0].Page1[0].Part2TableHeader[0].ColumnJ[0].CreditClaimedCheckboxes[0].c1_3[0]
+topmostSubform[0].Page1[0].Part2TableHeader[0].ColumnJ[0].CreditClaimedCheckboxes[0].c1_3[1]
+topmostSubform[0].Page1[0].Part2TableHeader[0].ColumnJ[0].CreditClaimedCheckboxes[0]
+topmostSubform[0].Page1[0].Part2TableHeader[0].ColumnJ[0]
+topmostSubform[0].Page1[0].Part2TableHeader[0]
+topmostSubform[0].Page1[0].Part2TableBody[0].RowA[0].f1_52[0]  : date_range
+topmostSubform[0].Page1[0].Part2TableBody[0].RowA[0].f1_53[0]
+topmostSubform[0].Page1[0].Part2TableBody[0].RowA[0].f1_54[0]
+topmostSubform[0].Page1[0].Part2TableBody[0].RowA[0].f1_55[0]
+topmostSubform[0].Page1[0].Part2TableBody[0].RowA[0].f1_56[0] :forigen_texes_paid_ILS
+topmostSubform[0].Page1[0].Part2TableBody[0].RowA[0].f1_57[0]
+topmostSubform[0].Page1[0].Part2TableBody[0].RowA[0].f1_58[0]
+topmostSubform[0].Page1[0].Part2TableBody[0].RowA[0].f1_59[0]
+topmostSubform[0].Page1[0].Part2TableBody[0].RowA[0].f1_60[0]   :forigen_texes_paid_USD
+topmostSubform[0].Page1[0].Part2TableBody[0].RowA[0].f1_61[0]   :forigen_texes_paid_USD_sum
+topmostSubform[0].Page1[0].Part2TableBody[0].RowA[0]
+topmostSubform[0].Page1[0].Part2TableBody[0].RowB[0].f1_62[0]
+topmostSubform[0].Page1[0].Part2TableBody[0].RowB[0].f1_63[0]
+topmostSubform[0].Page1[0].Part2TableBody[0].RowB[0].f1_64[0]
+topmostSubform[0].Page1[0].Part2TableBody[0].RowB[0].f1_65[0]
+topmostSubform[0].Page1[0].Part2TableBody[0].RowB[0].f1_66[0]
+topmostSubform[0].Page1[0].Part2TableBody[0].RowB[0].f1_67[0]
+topmostSubform[0].Page1[0].Part2TableBody[0].RowB[0].f1_68[0]
+topmostSubform[0].Page1[0].Part2TableBody[0].RowB[0].f1_69[0]
+topmostSubform[0].Page1[0].Part2TableBody[0].RowB[0].f1_70[0]
+topmostSubform[0].Page1[0].Part2TableBody[0].RowB[0].f1_71[0]
+topmostSubform[0].Page1[0].Part2TableBody[0].RowB[0]
+topmostSubform[0].Page1[0].Part2TableBody[0].RowC[0].f1_72[0]
+topmostSubform[0].Page1[0].Part2TableBody[0].RowC[0].f1_73[0]
+topmostSubform[0].Page1[0].Part2TableBody[0].RowC[0].f1_74[0]
+topmostSubform[0].Page1[0].Part2TableBody[0].RowC[0].f1_75[0]
+topmostSubform[0].Page1[0].Part2TableBody[0].RowC[0].f1_76[0]
+topmostSubform[0].Page1[0].Part2TableBody[0].RowC[0].f1_77[0]
+topmostSubform[0].Page1[0].Part2TableBody[0].RowC[0].f1_78[0]
+topmostSubform[0].Page1[0].Part2TableBody[0].RowC[0].f1_79[0]
+topmostSubform[0].Page1[0].Part2TableBody[0].RowC[0].f1_80[0]
+topmostSubform[0].Page1[0].Part2TableBody[0].RowC[0].f1_81[0]
+topmostSubform[0].Page1[0].Part2TableBody[0].RowC[0]
+topmostSubform[0].Page1[0].Part2TableBody[0]
+topmostSubform[0].Page1[0].f1_82[0]         : forigen_texes_paid_USD_total #This the total tax that paid
+topmostSubform[0].Page1[0]
+topmostSubform[0].Page2[0].f2_1[0]          :tax #line9-gets from line 8
+topmostSubform[0].Page2[0].f2_2[0]          :carry_over # usually 0
+topmostSubform[0].Page2[0].f2_3[0]          :tax_carry #line11 - as line 8
+topmostSubform[0].Page2[0].f2_4[0]
+topmostSubform[0].Page2[0].f2_5[0]
+topmostSubform[0].Page2[0].f2_6[0]          :combine_all_tax # line 11 - as line 8
+topmostSubform[0].Page2[0].f2_7[0]          :income_after_deduction # line 15 - as line 7
+topmostSubform[0].Page2[0].f2_8[0]      :adjestment # line16 - 0
+topmostSubform[0].Page2[0].f2_9[0]      :income_total #line17 - as line 7
+topmostSubform[0].Page2[0].f2_10[0]     :amuont_in_1040_line_15 # line18 get line 15 in 1040
+topmostSubform[0].Page2[0].f2_11[0]     :div_income_by_line_15 #line19
+topmostSubform[0].Page2[0].f2_12[0]     :amuont_in_1040_line_16 #line 20 -include schedule2 line 2 and 1040 line 16
+topmostSubform[0].Page2[0].f2_13[0]     :mult_l20_by_l19 #l21
+topmostSubform[0].Page2[0].f2_14[0]
+topmostSubform[0].Page2[0].f2_15[0]     :add_lines_20_21 # line23 as line21
+topmostSubform[0].Page2[0].f2_16[0]     :smaller_l14_or_l23 #line24 enter here and line 33
+topmostSubform[0].Page2[0].f2_17[0]
+topmostSubform[0].Page2[0].f2_18[0]
+topmostSubform[0].Page2[0].f2_19[0]
+topmostSubform[0].Page2[0].f2_20[0]
+topmostSubform[0].Page2[0].f2_21[0]
+topmostSubform[0].Page2[0].f2_22[0]
+topmostSubform[0].Page2[0].f2_23[0]
+topmostSubform[0].Page2[0].f2_24[0]
+topmostSubform[0].Page2[0].f2_25[0]     :from_l24
+topmostSubform[0].Page2[0].f2_26[0]     :boycott_reduction_always_0 #line34 - Zero
+topmostSubform[0].Page2[0].f2_27[0]     :sum_to_1040_schedule_3_l2 # line35 - put output in schd. 3 line 2
+topmostSubform[0].Page2[0]
+topmostSubform[0]
+[PDF_SRC]
+path = C:\Users\aman\Documents\IRS\2022\f1116_2022.pdf  : path
