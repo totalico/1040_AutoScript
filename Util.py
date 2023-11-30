@@ -1,4 +1,5 @@
 import configparser
+import os
 import re
 from pypdf import PdfReader
 
@@ -13,6 +14,10 @@ def configObjToArray (option , file):
         arr[i]=config_file.get(option , i)
     return arr
 
+def buildAndSearchFile (dir , file):
+    if file.exist():
+        i =0
+    return
 #config file has attributes that have multipule options
 def extractArrFromStringConfigFile (str):
 
@@ -131,7 +136,7 @@ def createFieldsFile (fileName):
                     s = s[1] + ' = ' + s[0]+'\n\n'
                     output_stream.write(s)
                     print(s)
-            output_stream.write('\n\n\n~~~~output~~~to~~~fields~~~~~~~~~~~~~~~\n\n\n')
+            output_stream.write('\n\n\[FIELDS_TO_PASTE]\n\n\n')
             for i in fieldsList:
                 output_stream.write('fields [\''+ i +'\'] : \n')
 

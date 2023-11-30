@@ -18,12 +18,14 @@ def pdf (option , confPath = '.editconfig'):
 
 pdfs = pdf('PDF_FORMS')
 dirs = configObjToArray('DIRS','.editconfig' )
+pdfDir = dirs['pdfs'] + '\\'
+fieldDir = dirs['fields_forms'] + '\\'
 print(dirs)
 
 def reader():
 
     calc   = configObjToArray('CALC_DATA', '.editconfig')
-    fields = configObjToArray('FIELDS', pdfs['1040']['fieldsFile'])
+    fields = configObjToArray('FIELDS', fieldDir+pdfs['1040']['fieldsFile'])
     filler = configObjToArray('FILLER_DETAILS', '.editconfig')
     dependets = configObjToArray('DEPENDENCE', '.editconfig')
     dividends = configObjToArray('DIVIDENDS', '.editconfig')
@@ -35,14 +37,17 @@ def reader():
         dependetsArr[i] = Util.extractArrFromStringConfigFile(dependets[i])
 
 
+    salaryInUSD = float(calc['salary_in_ils']) / float(calc['ils_usd_rate'])
+
 
     #lines in 1040 2002
-    l1a = calc['salary']
-    l1h =calc['salary']
+
+    l1a = str(salaryInUSD)
+    l1h = str(salaryInUSD)
     l3a = dividends['qualified_dividend']
     l3b = dividends['ordinary_dividend']
-    l7 = capitalGain(pdfs['schedleD']['name'] , pdfs['schedleD']['fieldsFile'])
-    l8 = schedule_1(pdfs['schedle1']['name'] , pdfs['schedle1']['fieldsFile'])
+    l7 = capitalGain(pdfDir+ pdfs['scheduled']['name'] ,fieldDir + pdfs['scheduled']['fieldsFile'])
+    l8 = schedule_1(dirs['pdfs']+ '\\'+ pdfs['schedule1']['name'] ,dirs['fields_forms']+ '\\' +pdfs['scheduleD1']['fieldsFile'])
     l9 = l1a+l3b+l7+l8
     l10 = 0 #adjestmnets
     l11 = l9-l10
@@ -54,7 +59,7 @@ def reader():
     l17 = 0
     l18 = l16+l17
     # this line is bifore l19, due i need l20 to b in l19
-    l20 = form_1116 (pdfs['form_1116']['name'] , pdfs['form_1116']['fieldsFile'],pdfs['schedule3']['name'] , pdfs['schedule3']['fieldsFile'],
+    l20 = form_1116 (dirs['pdfs']+ '\\' +pdfs['form_1116']['name'] , pdfs['form_1116']['fieldsFile'],pdfs['schedule3']['name'] , pdfs['schedule3']['fieldsFile'],
                    l15, l16 )
     f8812_re = f8812(pdfs['schedleD']['name'] , pdfs['schedleD']['fieldsFile'], l1a , l11,l18, l20  , len(dependets))#Suppose to b after s3
     l19 = f8812_re['l19']
@@ -186,6 +191,6 @@ def reader():
     with open("filled-out.pdf", "wb") as output_stream:
         writer.write(output_stream)
 
-# reader()
-
-print( dirs['fields_forms'] +pdfs['1040']['fieldsFile'])
+reader()
+# print(dirs['fields_forms'] +'\\'+pdfs['1040']['fieldsFile'])
+# print( dirs['fields_forms'] +'\\'+pdfs['1040']['fieldsFile'])

@@ -34,8 +34,8 @@ sum_short_long = topmostSubform[0].Page2[0].f2_01[0]
 
 
 
-
-~~~~output~~~to~~~fields~~~~~~~~~~~~~~~
+[_FIELDS_TO_PASTE]
+[~~~~output~~~to~~~fields~~~~~~~~~~~~~~~]
 
 
 fields ['name'] : 

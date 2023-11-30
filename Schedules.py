@@ -1,7 +1,7 @@
 import configparser
 import re
 from pypdf import PdfReader, PdfWriter
-import Util
+from Util import configObjToArray
 
 def f8812 (schedulePath, scheduleFields ,f1040_l1 , f1040_l11 ,f1040_l18_tax ,s3_l1_1116 ,dependancesNum, conf='.\\.editconfig'):
 
@@ -12,8 +12,8 @@ def f8812 (schedulePath, scheduleFields ,f1040_l1 , f1040_l11 ,f1040_l18_tax ,s3
     l5=dependancesNum*childCredit
     l16b = dependancesNum*additionalChildCredit
 
-    fields = Util.configObjToArray('FIELDS', scheduleFields)
-    data   = configObjToArray('CALC_DATA' , conf)
+    fields = configObjToArray('FIELDS', scheduleFields)
+    data   = configObjToArray('CALC_DATA', conf)
     personal_data = configObjToArray('FILLER_DETAILS', '.\\.editconfig')
 
     result = {}
@@ -174,7 +174,7 @@ def form_1116(schedulePath, scheduleFields, schedule3Path, schedule3Fields, f104
 
     data = configObjToArray('CALC_DATA', conf)
     fields = configObjToArray('FIELDS', scheduleFields)
-    personal_data = configObjToArray('FILLER_DETAILS',conf)
+    personal_data = configObjToArray('FILLER_DETAILS', conf)
 
     usd = float(data['ILS_USD_rate'])
     salary_usd = float(data['salary_in_ILS']) / usd
@@ -264,7 +264,8 @@ def schedule_3(schedulePath, scheduleFields, _1116amount):
 
 
 # schedule D
-def capitalGain(schedulePath, scheduleFields, conf =  '.\\.editconfig'):
+def capitalGain(schedulePath, scheduleFields, conf =  '.editconfig'):
+    print(scheduleFields)
     fields = configObjToArray('FIELDS', scheduleFields)
 
     data = configObjToArray('CALC_DATA', conf)
@@ -279,6 +280,7 @@ def capitalGain(schedulePath, scheduleFields, conf =  '.\\.editconfig'):
     if totalShortAndLong == 0 :
         print('No need in sced. D, No gain.')
         return 0
+
     reader = PdfReader(schedulePath)
     writer = PdfWriter()
     writer.append(reader)

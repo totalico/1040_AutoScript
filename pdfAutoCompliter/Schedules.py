@@ -1,6 +1,7 @@
 import configparser
 import re
 from pypdf import PdfReader, PdfWriter
+from Util import configObjToArray
 import Compliter
 
 def f8812 (schedulePath, scheduleFields ,f1040_l1 , f1040_l11 ,f1040_l18_tax ,s3_l1_1116 ,dependancesNum, conf='.\\.editconfig'):
