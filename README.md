@@ -15,6 +15,7 @@ personal info - your family and you, input names and ssn.
 calc info - salary, stocks, Dmei Lyda, ect.
 
 
+
 #  Principals
 
 1. The script assumes that your wages are more than 20000$ during a past year.
@@ -22,3 +23,9 @@ calc info - salary, stocks, Dmei Lyda, ect.
 3. It's your responsibility to look after errors and misleading, especially in 8812 form,
     which the IRS worn to be careful. Reckless may cause you for 2 years pantiled not
     take this credit.
+
+
+# Important to this version
+
+##NOTE! in this version the check-boxes are *NOT*   checking automatically.
+you need to check them manually.

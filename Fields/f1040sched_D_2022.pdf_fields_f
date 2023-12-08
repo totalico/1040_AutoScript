@@ -32,7 +32,9 @@ sum_long_term_gain = topmostSubform[0].Page1[0].f1_43[0]
 #line16-line15+line7
 sum_short_long = topmostSubform[0].Page2[0].f2_01[0]
 
+l18= topmostSubform[0].Page2[0].f2_02[0]
 
+l19 = topmostSubform[0].Page2[0].f2_03[0]
 
 [_FIELDS_TO_PASTE]
 [~~~~output~~~to~~~fields~~~~~~~~~~~~~~~]

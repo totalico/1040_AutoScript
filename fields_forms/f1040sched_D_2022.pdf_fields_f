@@ -29,13 +29,16 @@ long_term_carryover = topmostSubform[0].Page1[0].f1_42[0]
 #line15-lossescarryover
 sum_long_term_gain = topmostSubform[0].Page1[0].f1_43[0]
 
+lzero= topmostSubform[0].Page2[0].f2_02[0]
+
+lfzero = topmostSubform[0].Page2[0].f2_03[0]
+
 #line16-line15+line7
 sum_short_long = topmostSubform[0].Page2[0].f2_01[0]
 
 
 
-
-~~~~output~~~to~~~fields~~~~~~~~~~~~~~~
+[~~~~output~~~to~~~fields~~~~~~~~~~~~~~~]
 
 
 fields ['name'] : 
@@ -51,3 +54,5 @@ fields ['gain_long_term'] :
 fields ['long_term_carryover'] : 
 fields ['sum_long_term_gain'] : 
 fields ['sum_short_long'] : 
+fields ['l18'] :
+fields ['l19'] :

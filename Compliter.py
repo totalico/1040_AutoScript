@@ -1,31 +1,38 @@
 from pypdf import PdfReader, PdfWriter
 
+import Schedules
 import Util
 from Schedules import form_1116, calcTax, f8812, capitalGain, schedule_1
 from Util import configObjToArray
 
 
 def pdf (option , confPath = '.editconfig'):
+
     c ={}
     a = Util.configObjToArray(option , confPath) # a = {sch , dsdssaas}
     for i in a:
         c[i] = Util.extractArrFromStringConfigFile(a[i])
 
+    dirs = configObjToArray('DIRS', '.editconfig')
+    pdfDir = dirs['pdfs'] + '\\'
+    fieldDir = dirs['fields_forms'] + '\\'
+    for i in c:
+        if c[i] is None:
+            continue
+        c[i]['name'] = pdfDir + c[i]['name']
+        c[i]['fieldsFile'] =fieldDir +  c[i]['fieldsFile']
     print(c)
     return c
 
 
 
 pdfs = pdf('PDF_FORMS')
-dirs = configObjToArray('DIRS','.editconfig' )
-pdfDir = dirs['pdfs'] + '\\'
-fieldDir = dirs['fields_forms'] + '\\'
-print(dirs)
 
 def reader():
 
+    Schedules.createOutputFolder()
     calc   = configObjToArray('CALC_DATA', '.editconfig')
-    fields = configObjToArray('FIELDS', fieldDir+pdfs['1040']['fieldsFile'])
+    fields = configObjToArray('FIELDS', pdfs['1040']['fieldsFile'])
     filler = configObjToArray('FILLER_DETAILS', '.editconfig')
     dependets = configObjToArray('DEPENDENCE', '.editconfig')
     dividends = configObjToArray('DIVIDENDS', '.editconfig')
@@ -37,18 +44,18 @@ def reader():
         dependetsArr[i] = Util.extractArrFromStringConfigFile(dependets[i])
 
 
-    salaryInUSD = float(calc['salary_in_ils']) / float(calc['ils_usd_rate'])
+    salaryInUSD = int(float(calc['salary_in_ils']) / float(calc['ils_usd_rate']))
 
 
-    #lines in 1040 2002
+    #lines in 1040 2022
 
-    l1a = str(salaryInUSD)
-    l1h = str(salaryInUSD)
+    l1a = salaryInUSD
+    l1h = salaryInUSD
     l3a = dividends['qualified_dividend']
-    l3b = dividends['ordinary_dividend']
-    l7 = capitalGain(pdfDir+ pdfs['scheduled']['name'] ,fieldDir + pdfs['scheduled']['fieldsFile'])
-    l8 = schedule_1(dirs['pdfs']+ '\\'+ pdfs['schedule1']['name'] ,dirs['fields_forms']+ '\\' +pdfs['scheduleD1']['fieldsFile'])
-    l9 = l1a+l3b+l7+l8
+    l3b = int(dividends['ordinary_dividend'])
+    l7 = int(capitalGain(pdfs['scheduled']['name'] ,pdfs['scheduled']['fieldsFile']))
+    l8 = int(schedule_1( pdfs['schedule1']['name'] ,pdfs['schedule1']['fieldsFile']))
+    l9 = int(l1a)+int(l3b)+int(l7)+int(l8)
     l10 = 0 #adjestmnets
     l11 = l9-l10
     l12= int(calc['standard_deduction'])
@@ -59,9 +66,9 @@ def reader():
     l17 = 0
     l18 = l16+l17
     # this line is bifore l19, due i need l20 to b in l19
-    l20 = form_1116 (dirs['pdfs']+ '\\' +pdfs['form_1116']['name'] , pdfs['form_1116']['fieldsFile'],pdfs['schedule3']['name'] , pdfs['schedule3']['fieldsFile'],
+    l20 = form_1116 (pdfs['form_1116']['name'] , pdfs['form_1116']['fieldsFile'],pdfs['schedule3']['name'] ,pdfs['schedule3']['fieldsFile'],
                    l15, l16 )
-    f8812_re = f8812(pdfs['schedleD']['name'] , pdfs['schedleD']['fieldsFile'], l1a , l11,l18, l20  , len(dependets))#Suppose to b after s3
+    f8812_re = f8812(pdfs['form_8812']['name'] ,pdfs['form_8812']['fieldsFile'], l1a , l11,l18, l20  , len(dependets))#Suppose to b after s3
     l19 = f8812_re['l19']
     l21 = l19 + l20
     l22 = l18 - l21
@@ -112,9 +119,8 @@ def reader():
                                fields['country3']:filler['country'],
                                fields['zip2']:filler['zip'],
 
-            #
-                                fields['salary']:str(l1a),
-                                fields['sum_salary']:str(l1h),
+                                fields['salary']: str(l1a),
+                                fields['sum_salary']: str(l1h),
                                 fields['qualified_dividends']:str(l3a),
                                 fields['ordinary_dividends'] : str(l3b),
                                 fields['capital_gain']:str(l7),
@@ -123,7 +129,7 @@ def reader():
                                 fields['total_income_adjusted']:str(l11),
                                 fields['standard_deduction']:str(l12),
                                 fields['total_dedction']:str(l14),
-                                fields['taxable_income']:str(l15)
+                                fields['l15_taxable_income']:str(l15)
                          })
 
     writer.update_page_form_field_values(
@@ -131,24 +137,24 @@ def reader():
                                 fields['l16_tax']:str(l16),
                                 fields['l17_amount_s2l3-0']:str(l17),
                                 fields['l18_add_l16_l17']:str(l18),
-                                fields['l19_childTaxCredit_8812l19-0']:str(l19),
+                                fields['l19_childtaxcredit_8812l19-0']:str(l19),
                                 fields['l20_amount_s3l8-0']:str(l20),
                                 fields['l21_add_l20_l19']:str(l21),
                                 fields['l22_l18_sub_l21']:str(l22),
-                                fields['l23_otherTaxes_s2l21-0']:str(l23),
+                                fields['l23_othertaxes_s2l21-0']:str(l23),
                                 fields['l24_add_22_23']:str(l24),
-                                fields['l25a_federalIncome_w2-0']:str(l25a),
-                                fields['l25b_federalIncome_1099-0']:str(l25b),
+                                fields['l25a_federalincome_w2-0']:str(l25a),
+                                fields['l25b_federalincome_1099-0']:str(l25b),
                                 fields['l25c_other_forms-0']:str(l25c),
                                 fields['l25d_total_a-c-0']:str(l25d),
                                 fields['l26_estimated_2021_return_overpaid-0']:str(l26),
-                                fields['l27_EIC-0']:str(l27),
-                                fields['l28_aditional_childTaxCredit_8812l27']:str(l28),
+                                fields['l27_eic-0']:str(l27),
+                                fields['l28_aditional_childtaxcredit_8812l27']:str(l28),
                                 fields['l29_american_oppornunity-0']:str(l29),
                                 fields['l31_amount_s3l15-0']:str(l31_s3l15),
                                 fields['l32_add_ll27_l28_l29_l31-l28']:str(l32),
-                                fields['l33_totalPayments_add_l25b_l26_l32']:str(l33),
-                                fields['l34_l33_isBigger_l24_sub_l33_l24']:str(l34),
+                                fields['l33_totalpayments_add_l25b_l26_l32']:str(l33),
+                                fields['l34_l33_isbigger_l24_sub_l33_l24']:str(l34),
                                 fields['l35a_amount_to_refound']:str(l35),
                                 fields['l35b_routing']:filler['rout'] ,
                                 fields['l35d_account']:filler['account'],
@@ -160,9 +166,13 @@ def reader():
                                 fields['email']:filler['email'],
             } )
 
-    with open("declarations.txt", "w") as declarations:
+    outdir = configObjToArray('DIRS', '.editconfig')['output_folder'] + '\\'
+    output = outdir + configObjToArray('OTHER_FORMS', '.editconfig')['summarizedfilename']
+
+
+    with open(output, "w") as declarations:
         declarations.write('===========     ILS/DOLLAR RATE   ============\n\n')
-        declarations.write('1 USD = ' + calc['ils_dollar_rate'] + ' ILS')
+        declarations.write('1 USD = ' + calc['ils_usd_rate'].__str__() + ' ILS')
 
     j = 1
     for i in dependetsArr:
@@ -173,7 +183,7 @@ def reader():
                 fields['dep_' + str(j) + '_gen']: dependetsArr[i]['rel']
             })
         else:
-            with open("declarations.txt", "a") as declarations:
+            with open(output, "a") as declarations:
                 if j == 5:
                     declarations.write('\n\n\n\n\n\n===========     DEPENDENCIES    ===================\n\n')
                 declarations.write(str(j) + ' > ' + 'Name:' +dependetsArr[i]['name']+
@@ -182,13 +192,12 @@ def reader():
         j+=1
     declarations.close()
 
-    with open("declarations.txt", "a") as declarations:
+    with open(output, "a") as declarations:
         declarations.write('\n\n\n\n\n\n===========     ADDED FORMS     =================\n\n')
-        for i in forms:
-            declarations.write(str(forms.index(i)+1)+' > '+i+'\n')
+        for i in Schedules.forms:
+            declarations.write(str(Schedules.forms.index(i)+1)+' > '+i+'\n')
 
-    # write "output" to pypdf-output.pdf
-    with open("filled-out.pdf", "wb") as output_stream:
+    with open(outdir +'1040.pdf', "wb") as output_stream:
         writer.write(output_stream)
 
 reader()

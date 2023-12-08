@@ -28,8 +28,10 @@ dep_4_ssn  = topmostSubform[0].Page1[0].Table_Dependents[0].Row4[0].f1_26[0]
 dep_4_gen  = topmostSubform[0].Page1[0].Table_Dependents[0].Row4[0].f1_27[0]
 
 #calculations
-salary = topmostSubform[0].Page1[0].f1_28[0]    #line 1
-sum_salary= topmostSubform[0].Page1[0].f1_37[0] #line 1z
+  #line 1
+salary = topmostSubform[0].Page1[0].f1_28[0]
+ #line 1z
+sum_salary= topmostSubform[0].Page1[0].f1_37[0]
 
 #line 3a - qualified dividends
 qualified_dividends = topmostSubform[0].Page1[0].f1_40[0]
@@ -56,6 +58,8 @@ standard_deduction=topmostSubform[0].Page1[0].StandardDeductionBubble[0].f1_53[0
 
 #line 14 - add lines 13, 14
 total_dedction=topmostSubform[0].Page1[0].f1_55[0]
+
+l15_taxable_income = topmostSubform[0].Page1[0].f1_56[0]
 
 #line 16 taxable income (Use table. For stocks use worksheet in inst.)
 l16_tax = topmostSubform[0].Page2[0].f2_02[0]

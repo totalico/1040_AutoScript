@@ -14,17 +14,21 @@
 1040 =       name: f1040.pdf                 , fieldsFile: f1040_fields_f
 schedule1=   name: f1040s1.pdf               , fieldsFile: f1040s1_f
 schedule2=   name:f1040s2.pdf                , fieldsFile : f1040s2_f
-schedule3=   name:f1040s3.pdf                , fieldsFile : f1040s3_f
+schedule3=   name:f1040s3.pdf                , fieldsFile : f1040s3_fields_f
 scheduleA=                                   , fieldsFile =
 scheduleB=   name:f1040sb.pdf                , fieldsFile : f1040sb_f
 scheduleC=                                   , fieldsFile =
 scheduleD=   name:f1040sched_D_2022.pdf      , fieldsFile: f1040sched_D_2022.pdf_fields_f
-form_8812=   name:f1040s8--2022.pdf          , fieldsFile: f1040s8--2022_f
+form_8812=   name:f1040s8--2022.pdf          , fieldsFile: f1040s8--2022_fields_f
 form_1116=  name:f1116_2022.pdf              , fieldsFile :f1116_2022_fields_f
+
+[OTHER_FORMS]
+summarizedFileName = 'Declarations.txt'
 
 [DIRS]
 pdfs = .\PDFs
 fields_forms = .\Fields
+output_folder= .\Output-beta
 
 [FILLER_DETAILS]
 name =PESIA ELKA
@@ -52,13 +56,14 @@ yonatan =    name : YONATAN,  ssn :    9090  , rel : SON
 tamar =      name : TAMAR,    ssn :    8008  , rel : DAUGHTER
 
 [CALC_DATA]
-salary_in_ILS=360000
+salary_in_ILS=226894
 dmei_liyda = 0
 
 ILS_USD_rate=3.5
-tax_in_ILS=12000
-bituch_leumi_ILS=1200
-bituch_briut_ILS=500
+tax_in_ILS=16417
+bituch_leumi_ILS=12066
+bituch_briut_ILS=10759
+
 standard_deduction=19400
 
 [SHORT_TERM]

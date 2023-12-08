@@ -56,7 +56,7 @@ def fieldsDumper(pdfFile, writeFile = False):
 
 
 # This method is used to compare two 1040 files, in order to get the diffrences.
-#NOTE it gets files of Compiled PDF, [the output of ]
+#NOTE it gets files of Compiled PDF, [the Output-beta of ]
 def comparefiles (file1 , file2):
 
     arr1 = []
@@ -142,8 +142,4 @@ def createFieldsFile (fileName):
 
 
 
-# fieldsDumper('C:\\Users\\aman\\Documents\\GitHub\\1040_AutoScript\pdfAutoCompliter\\f1040.pdf' , True)
-#C:\\Users\\aman\\Documents\\IRS\\2022\\f1116_2022.pdf
-# C:\Users\aman\PycharmProjects\pdfAutoCompliter\fields_forms\f1040s8--2022.pdf
-# C:\\Users\\aman\\Documents\\GitHub\\1040_AutoScript\\pdfAutoCompliter\\f1040_fields
-createFieldsFile('C:\\Users\\aman\\Documents\\GitHub\\1040_AutoScript\\pdfAutoCompliter\\f1040_fields')
+# fieldsDumper('C:\\Users\\aman\\Documents\\GitHub\\, True)

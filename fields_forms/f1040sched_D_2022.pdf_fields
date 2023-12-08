@@ -58,8 +58,8 @@ topmostSubform[0].Page1[0]
 topmostSubform[0].Page2[0].f2_01[0]     : sum_short_long #line 16 - line 15+line 7
 topmostSubform[0].Page2[0].c2_1[0]
 topmostSubform[0].Page2[0].c2_1[1]      #28% RATE WORKSHEET
-topmostSubform[0].Page2[0].f2_02[0]
-topmostSubform[0].Page2[0].f2_03[0]
+topmostSubform[0].Page2[0].f2_02[0]     :l16-0
+topmostSubform[0].Page2[0].f2_03[0]     :l17-0
 topmostSubform[0].Page2[0].c2_2[0]
 topmostSubform[0].Page2[0].c2_2[1]
 topmostSubform[0].Page2[0].TagCorrectingSubform[0].f2_04[0]

@@ -1,14 +1,27 @@
-import configparser
-import re
+import os
+
 from pypdf import PdfReader, PdfWriter
 from Util import configObjToArray
 
-def f8812 (schedulePath, scheduleFields ,f1040_l1 , f1040_l11 ,f1040_l18_tax ,s3_l1_1116 ,dependancesNum, conf='.\\.editconfig'):
+
+forms = []
+output= configObjToArray('DIRS', '.editconfig')['output_folder'] + '\\'
+
+def createOutputFolder ():
+    if not os.path.exists(output):
+        try:
+            os.makedirs(output)
+        except OSError as error:
+            print(error)
+
+def f8812 (schedulePath, scheduleFields ,f1040_l1 , f1040_l11 ,f1040_l18_tax ,s3_l1_1116 ,dependancesNum, conf='.\\.editconfig',outputfile =output + 'f8812_2022.pdf'):
 
     childCredit = 2000
     additionalChildCredit = 1500
     otherStatuses=200000
     workSheetA = f1040_l18_tax - s3_l1_1116   #Tax there - Tax here
+    if  workSheetA < 0:
+        workSheetA = 0
     l5=dependancesNum*childCredit
     l16b = dependancesNum*additionalChildCredit
 
@@ -22,13 +35,14 @@ def f8812 (schedulePath, scheduleFields ,f1040_l1 , f1040_l11 ,f1040_l18_tax ,s3
     if workSheetA > l5:
         _1040_l19= l5
     result['l19']= _1040_l19
+
     l16a = l5 - _1040_l19
     l17 = l16a
     if l16a > l16b:
         l17 = l16b
     l18a = f1040_l1
     l19 = l18a-2500
-    l20 = l19*0.15
+    l20 = int(l19*0.15)
     l25 = 0
     l26 =l20
     l27 = l26
@@ -55,25 +69,34 @@ def f8812 (schedulePath, scheduleFields ,f1040_l1 , f1040_l11 ,f1040_l18_tax ,s3
             fields['l10_sub_from_l3_l9-0']: '0', #is wages > 200k ? I wish...
             fields['l11_mult_l10_0.05']: '0',
             fields['l12_sub_l8_l11']: str(l5), #as l8
-            fields['l13_credit_limit_worksheet_A']: str (workSheetA),
-            fields['l14-0']:'0',
-            fields['l16a_sub_l12_l14']:  str(l5), #as l8
+            fields['l13_credit_limit_worksheet_a']: str (workSheetA),
+            fields['l14-0']: str(_1040_l19),
+        })
+
+    writer.update_page_form_field_values(
+        writer.pages[1], {
+            fields['l16a_sub_l12_l14']:  str(l5 - _1040_l19), #as l8
             fields['l16b1_num_children']: str(dependancesNum),
             fields['l16b2_l16b1*1500']: str(l16b),
             fields['l17_smaller_l16a_l16b2']: str(l17), #nowadays cannot be otherwise
             fields['l18a_earned_income']: str(l18a),
             fields['l18b_combat_pay-0']: '0',
-            fields['l19_l18a_isBigger_2500']:str(l19),
-            fields['L20_mult_l19_by_0.15']:str(l20),
+            fields['l19_l18a_isbigger_2500']:str(l19),
+            fields['l20_mult_l19_by_0.15']:str(l20),
             fields['l21_medicare-0']: '0',
             fields['l22_s1l15-0']: '0',
             fields['l23_add_l22_21-0']: '0',
-            fields['l24_2040L27-0']: '0',
+            fields['l24_2040l27-0']: '0',
             fields['l25_sub_l23_l24-0']: str(l25),
             fields['l26_bigger_l20_l25-l20']: str(l26),
             fields['l27_smaller_l26_l17-l17']: str(l27)
 
             })
+    # write "Output-beta" to pypdf-Output-beta.pdf
+    with open(outputfile, "wb") as output_stream:
+        writer.write(output_stream)
+
+    forms.append('form 8812')
     return result
 
 '''
@@ -99,7 +122,7 @@ def calcTax(amountTaxtable_104l15, conf ='.\\.editconfig'):
 
     l4 = qualifiedDivindends + sched_D_smaller_l15_or_16  # line4
     l5 = amountTaxtable_104l15 - l4
-    if l5 > 0:
+    if l5 < 0:
         l5 = 0
     headOfHousehold = 55800
     l7 = headOfHousehold
@@ -128,67 +151,69 @@ def calcTax(amountTaxtable_104l15, conf ='.\\.editconfig'):
     l19 = l9 + l17
     l20 = l10 - l19
     l21 = l20 * 0.20
-    l22 = getTaxFromTable(l5)
+    l22 = int(getTaxFromTable(l5 , 68))
     l23 = l18 + l21 + l22
-    l24 = getTaxFromTable(amountTaxtable_104l15)
+    l24 = int(getTaxFromTable(amountTaxtable_104l15 , 68))
     l25 = l24
     if l23 > l24:
         l25 = l24
 
-    with open('.\\Worksheet_qualified_dividnends_and_capital_gain_tax_output.txt', 'w') as file:
+    with open(output + '.\\Worksheet_qualified_dividnends_and_capital_gain_tax_output.txt', 'w') as file:
         file.write('Line        |       value       \n')
         file.write('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n')
-        file.write('1           |       ' + amountTaxtable_104l15 + '  \n')
-        file.write('4           |       ' + l4 + '       \n')
-        file.write('5           |       ' + l5 + '       \n')
-        file.write('7           |       ' + l7 + '       \n')
-        file.write('8           |       ' + l8 + '       \n')
-        file.write('9           |       ' + l9 + '       \n')
-        file.write('10          |       ' + l10 + '       \n')
-        file.write('12          |       ' + l12 + '       \n')
-        file.write('13          |       ' + l13 + '       \n')
-        file.write('14          |       ' + l14 + '       \n')
-        file.write('15          |       ' + l15 + '       \n')
-        file.write('16          |       ' + l16 + '       \n')
-        file.write('17          |       ' + l17 + '       \n')
-        file.write('18          |       ' + l18 + '       \n')
-        file.write('19          |       ' + l19 + '       \n')
-        file.write('20          |       ' + l20 + '       \n')
-        file.write('21          |       ' + l21 + '       \n')
-        file.write('22          |       ' + l22 + '       \n')
-        file.write('23          |       ' + l23 + '       \n')
-        file.write('24          |       ' + l24 + '       \n')
-        file.write('25          |       ' + l25 + '       \n')
+        file.write('1           |       ' + str(amountTaxtable_104l15) + '  \n')
+        file.write('4           |       ' + l4.__str__() + '       \n')
+        file.write('5           |       ' + l5.__str__() + '       \n')
+        file.write('7           |       ' + l7.__str__() + '       \n')
+        file.write('8           |       ' + l8.__str__() + '       \n')
+        file.write('9           |       ' + l9.__str__() + '       \n')
+        file.write('10          |       ' + l10.__str__() + '       \n')
+        file.write('12          |       ' + l12.__str__() + '       \n')
+        file.write('13          |       ' + l13.__str__() + '       \n')
+        file.write('14          |       ' + l14.__str__() + '       \n')
+        file.write('15          |       ' + l15.__str__() + '       \n')
+        file.write('16          |       ' + l16.__str__() + '       \n')
+        file.write('17          |       ' + l17.__str__() + '       \n')
+        file.write('18          |       ' + l18.__str__() + '       \n')
+        file.write('19          |       ' + l19.__str__() + '       \n')
+        file.write('20          |       ' + l20.__str__() + '       \n')
+        file.write('21          |       ' + l21.__str__() + '       \n')
+        file.write('22          |       ' + l22.__str__() + '       \n')
+        file.write('23          |       ' + l23.__str__() + '       \n')
+        file.write('24          |       ' + l24.__str__() + '       \n')
+        file.write('25          |       ' + l25.__str__() + '       \n')
 
     print('Created summerized file : Worksheet_qualified_dividnends_and_capital_gain_tax_output.txt')
-    return l25
+    return int(l25)
 
 
 def getTaxFromTable(amount, ppInIstructionTable):
     # TODO For future developing make the table automatically
-    a = input('Look tax table in instruction in 1040ins '+ ppInIstructionTable + ' :> ' + amount)
+    b= str(ppInIstructionTable)
+    a = input('Insert amount from Tax-Table [instruction page: ' + b + ']  for income amount : ' + str(amount) + ' :> ' )
     return a
 
 
-def form_1116(schedulePath, scheduleFields, schedule3Path, schedule3Fields, f1040_l15_taxtableAmount, f1040_l16_tax , conf = '.\\.editconfig'):
+def form_1116(schedulePath, scheduleFields, schedule3Path, schedule3Fields, f1040_l15_taxtableAmount, f1040_l16_tax , conf = '.editconfig',outputfile = output +'f1116_2022.pdf'):
 
     data = configObjToArray('CALC_DATA', conf)
     fields = configObjToArray('FIELDS', scheduleFields)
     personal_data = configObjToArray('FILLER_DETAILS', conf)
 
-    usd = float(data['ILS_USD_rate'])
-    salary_usd = float(data['salary_in_ILS']) / usd
-    tax = float(data['tax_in_ILS']) / usd
-    bituch_briut = float(data['bituch_briut_ILS']) / usd
-    bituch_leumi = float(data['bituch_leumi_ILS']) / usd
-    totalTaxUSD = tax + bituch_leumi + bituch_briut
-    totalTaxILS = int(data['bituch_briut_ILS']) + int(data['bituch_leumi_ILS']) + int(data['tax_in_ILS'])
-    print(
-        'in USD :\nTaxes = ' + tax + '\nBituch-Briut = ' + bituch_briut + '\nBituch-Leumi = ' + bituch_leumi + '\nTotal = ' + totalTaxUSD)
+    usd = float(data['ils_usd_rate'])
+    salary_usd = int(float(data['salary_in_ils']) / usd)
+    tax = int(float(data['tax_in_ils']) / usd )
 
-    taxtable_income = salary_usd - int(data['standard_deduction'])
-    wages_incomes_ratio = salary_usd / f1040_l15_taxtableAmount
-    l21 = f1040_l16_tax * wages_incomes_ratio
+    bituch_briut = int(float(data['bituch_briut_ils']) / usd)
+    bituch_leumi = int(float(data['bituch_leumi_ils']) / usd)
+    totalTaxUSD = tax + bituch_leumi + bituch_briut
+    totalTaxILS = int(data['bituch_briut_ils']) + int(data['bituch_leumi_ils']) + int(data['tax_in_ils'])
+    print(
+        'in USD :\nTaxes = ' + str(tax) + '\nBituch-Briut = ' + str(bituch_briut) + '\nBituch-Leumi = ' + str(bituch_leumi) + '\nTotal = ' + str(totalTaxUSD))
+
+    l7_taxtable_income = salary_usd - int(data['standard_deduction'])
+    wages_incomes_ratio = l7_taxtable_income / f1040_l15_taxtableAmount
+    l21 = int(f1040_l16_tax * wages_incomes_ratio)
     l24 = totalTaxUSD
     if l21 < totalTaxUSD:
         l24 = l21
@@ -212,12 +237,12 @@ def form_1116(schedulePath, scheduleFields, schedule3Path, schedule3Fields, f104
             fields['mult_f_by_c']: data['standard_deduction'],
             fields['deduction_from_all']: data['standard_deduction'],
             fields['deduction_from_all_sum']: data['standard_deduction'],
-            fields['wage_sub_deduction']: str(taxtable_income),
+            fields['wage_sub_deduction']: str(l7_taxtable_income),
             fields['date_range']: '1.1.22 - 12.31.22',
-            fields['forigen_texes_paid_ILS']: str(totalTaxILS),
-            fields['forigen_texes_paid_USD']: str(totalTaxUSD),
-            fields['forigen_texes_paid_USD_sum']: str(totalTaxUSD),
-            fields['forigen_texes_paid_USD_total']: str(totalTaxUSD)
+            fields['forigen_texes_paid_ils']: str(totalTaxILS),
+            fields['forigen_texes_paid_usd']: str(totalTaxUSD),
+            fields['forigen_texes_paid_usd_sum']: str(totalTaxUSD),
+            fields['forigen_texes_paid_usd_total']: str(totalTaxUSD)
         })
     writer.update_page_form_field_values(
         writer.pages[1], {
@@ -225,9 +250,9 @@ def form_1116(schedulePath, scheduleFields, schedule3Path, schedule3Fields, f104
             fields['carry_over']: '0',
             fields['tax_carry']: str(totalTaxUSD),
             fields['combine_all_tax']: str(totalTaxUSD),
-            fields['income_after_deduction']: str(taxtable_income),
+            fields['income_after_deduction']: str(l7_taxtable_income),
             fields['adjestment']: '0',
-            fields['income_total']: str(taxtable_income),
+            fields['income_total']: str(l7_taxtable_income),
             fields['amount_in_1040_line_15']: str(f1040_l15_taxtableAmount),
             fields['div_income_by_line_15']: str(wages_incomes_ratio),
             fields['amount_in_1040_line_16']: str(f1040_l16_tax),
@@ -239,13 +264,17 @@ def form_1116(schedulePath, scheduleFields, schedule3Path, schedule3Fields, f104
             fields['sum_to_1040_schedule_3_l2']: str(l24)
 
         })
+    # write "Output-beta" to pypdf-Output-beta.pdf
+    with open(outputfile, "wb") as output_stream:
+        writer.write(output_stream)
     schedule_3(schedule3Path, schedule3Fields ,l24)
-    return l24
+    forms.append('form 1116')
+    return int(l24)
 
 '''
 line 8 - put in 1040 l_20
 '''
-def schedule_3(schedulePath, scheduleFields, _1116amount):
+def schedule_3(schedulePath, scheduleFields, _1116amount,outputfile =output + 'schedule3_2022.pdf'):
 
     fields = configObjToArray('FIELDS', scheduleFields)
 
@@ -261,11 +290,16 @@ def schedule_3(schedulePath, scheduleFields, _1116amount):
             fields['_1116form']: str(_1116amount),
             fields['total']: str(_1116amount)
         })
+    # write "Output-beta" to pypdf-Output-beta.pdf
+    with open(outputfile, "wb") as output_stream:
+        writer.write(output_stream)
+    forms.append('schedule 3')
+
 
 
 # schedule D
-def capitalGain(schedulePath, scheduleFields, conf =  '.editconfig'):
-    print(scheduleFields)
+def capitalGain(schedulePath, scheduleFields, conf =  '.editconfig' ,outputfile =output + 'scheduleD_2022.pdf'):
+
     fields = configObjToArray('FIELDS', scheduleFields)
 
     data = configObjToArray('CALC_DATA', conf)
@@ -301,15 +335,24 @@ def capitalGain(schedulePath, scheduleFields, conf =  '.editconfig'):
             fields['long_term_carryover']: long_term['loss_carry_over'],
             fields['sum_long_term_gain']: str(totalGainLong),
 
-            fields['sum_short_long']: str[totalShortAndLong]
         })
 
-    return totalShortAndLong
+    writer.update_page_form_field_values(
+        writer.pages[1],{
+            fields['sum_short_long']: str(totalShortAndLong),
+            fields['l18'] : '0',
+            fields['l19'] : '0'
+        })
+    # write "Output-beta" to pypdf-Output-beta.pdf
+    with open(outputfile, "wb") as output_stream:
+        writer.write(output_stream)
+    forms.append('schedule D')
+    return int(totalShortAndLong)
 
 
 # other income - DMEI LIYDA
 # 'C:\\Users\\aman\\PycharmProjects\\pdfAutoCompliter\\fields_forms\\schedule1_fields'
-def schedule_1(schedulePath, scheduleFields ,reason='PAYMENTS INSTEAD OF SALARY DURING BIRTH-VACATION'):
+def schedule_1(schedulePath, scheduleFields ,reason='PAYMENTS INSTEAD OF SALARY DURING BIRTH-VACATION' ,outputfile =output + 'schedule1_2022.pdf'):
 
     data = configObjToArray('CALC_DATA', '.\\.editconfig')
     if not data['dmei_liyda'].isnumeric():
@@ -337,4 +380,8 @@ def schedule_1(schedulePath, scheduleFields ,reason='PAYMENTS INSTEAD OF SALARY 
             fields['total_income']: data['dmei_liyda'],
             fields['sum']: data['dmei_liyda']})
 
+    # write "Output-beta" to pypdf-Output-beta.pdf
+    with open(outputfile, "wb") as output_stream:
+        writer.write(output_stream)
+    forms.append('schedule 1')
     return int (data['dmei_liyda'])
