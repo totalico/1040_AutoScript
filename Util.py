@@ -23,7 +23,7 @@ def extractArrFromStringConfigFile (str):
 
     str = str.replace(' ', '')
     if not re.match(r'.+[\:,].+[,.+\:.+,.+\:.+]*' , str):
-        print('error: pattern unknown')
+        # print('error: pattern unknown')
         return None
 
     b = {}

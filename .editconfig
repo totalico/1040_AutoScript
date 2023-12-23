@@ -8,8 +8,6 @@
 # max_line_length = 120
 # tab_width = 4
 
-# Please keep in your mind that multiple value uses key-value pattern .... : .... , ...:...., ...: ...
-
 [PDF_FORMS]
 1040 =       name: f1040.pdf                 , fieldsFile: f1040_fields_f
 schedule1=   name: f1040s1.pdf               , fieldsFile: f1040s1_f
@@ -20,10 +18,11 @@ scheduleB=   name:f1040sb.pdf                , fieldsFile : f1040sb_f
 scheduleC=                                   , fieldsFile =
 scheduleD=   name:f1040sched_D_2022.pdf      , fieldsFile: f1040sched_D_2022.pdf_fields_f
 form_8812=   name:f1040s8--2022.pdf          , fieldsFile: f1040s8--2022_fields_f
-form_1116=  name:f1116_2022.pdf              , fieldsFile :f1116_2022_fields_f
+form_1116=   name:f1116_2022.pdf              , fieldsFile :f1116_2022_fields_f
 
 [OTHER_FORMS]
-summarizedFileName = 'Declarations.txt'
+summarizedFileName = Declarations.txt
+worksheet = Worksheet_qualified_dividnends_and_capital_gain_tax_output.txt
 
 [DIRS]
 pdfs = .\PDFs
@@ -31,13 +30,13 @@ fields_forms = .\Fields
 output_folder= .\Output-beta
 
 [FILLER_DETAILS]
-name =PESIA ELKA
-family_name=SEINFELD
-ssn=215354998
-occupation=COMPUTERS
-email=pesikins@gmail.com
-phone=+972-583-215858
-address=24 ARIE BEN ELIEZER STREET
+name =      PESIA ELKA
+family_name= SEINFELD
+ssn=        215354998
+occupation= COMPUTERS
+email=      pesikins@gmail.com
+phone=       +972-583-215858
+address=        24 ARIE BEN ELIEZER STREET
 city=PETACH-TIQUA
 apt=8
 country=ISREAL
@@ -82,6 +81,3 @@ loss_carry_over = 0
 #dividends- "IRS Box DIVIDENDS AND DISTRIBUTIONS"
 qualified_dividend=489
 ordinary_dividend=509
-
-
-[DATA_FROM_INSTARUCIONS]

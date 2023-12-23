@@ -21,7 +21,6 @@ def pdf (option , confPath = '.editconfig'):
             continue
         c[i]['name'] = pdfDir + c[i]['name']
         c[i]['fieldsFile'] =fieldDir +  c[i]['fieldsFile']
-    print(c)
     return c
 
 
@@ -99,7 +98,7 @@ def reader():
         l37 = 0
     l38 = 0
 
-    reader = PdfReader('f1040.pdf')
+    reader = PdfReader(pdfs['1040']['name'])
     writer = PdfWriter()
 
     writer.append(reader)

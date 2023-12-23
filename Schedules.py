@@ -158,7 +158,8 @@ def calcTax(amountTaxtable_104l15, conf ='.\\.editconfig'):
     if l23 > l24:
         l25 = l24
 
-    with open(output + '.\\Worksheet_qualified_dividnends_and_capital_gain_tax_output.txt', 'w') as file:
+    worksheet = configObjToArray('OTHER_FORMS' , conf)['worksheet']
+    with open(output + worksheet, 'w') as file:
         file.write('Line        |       value       \n')
         file.write('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n')
         file.write('1           |       ' + str(amountTaxtable_104l15) + '  \n')
@@ -183,7 +184,7 @@ def calcTax(amountTaxtable_104l15, conf ='.\\.editconfig'):
         file.write('24          |       ' + l24.__str__() + '       \n')
         file.write('25          |       ' + l25.__str__() + '       \n')
 
-    print('Created summerized file : Worksheet_qualified_dividnends_and_capital_gain_tax_output.txt')
+    print('Created summerized file : ' + output + worksheet)
     return int(l25)
 
 
