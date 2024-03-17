@@ -1,7 +1,90 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="780aa7ad-f6e4-4fff-98ec-318efde01004" name="Changes" comment="" />
+    <list default="true" id="780aa7ad-f6e4-4fff-98ec-318efde01004" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../1040Filler/.idea/1040Filler.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../1040Filler/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../1040Filler/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../1040Filler/2023/.editconfig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../1040Filler/2023/Compliter.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../1040Filler/2023/Fields/f1040@23_fields" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../1040Filler/2023/Fields/f1040s1@23_fields" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../1040Filler/2023/Fields/f1040s3@23_fields" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../1040Filler/2023/Fields/f1040s8@23_fields" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../1040Filler/2023/Fields/f1040sD@23_fields" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../1040Filler/2023/Fields/f1116@23_fields" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../1040Filler/2023/PDFs/f1040.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../1040Filler/2023/PDFs/f1040_fields" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../1040Filler/2023/PDFs/f1040s1.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../1040Filler/2023/PDFs/f1040s1_fields" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../1040Filler/2023/PDFs/f1040s3.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../1040Filler/2023/PDFs/f1040s8.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../1040Filler/2023/PDFs/f1040sd.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../1040Filler/2023/PDFs/f1116.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../1040Filler/2023/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../1040Filler/2023/ReleaseV1/.editconfig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../1040Filler/2023/ReleaseV1/Compliter.exe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../1040Filler/2023/ReleaseV1/Fields/f1040@23_fields" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../1040Filler/2023/ReleaseV1/Fields/f1040s1@23_fields" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../1040Filler/2023/ReleaseV1/Fields/f1040s3@23_fields" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../1040Filler/2023/ReleaseV1/Fields/f1040s8@23_fields" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../1040Filler/2023/ReleaseV1/Fields/f1040sD@23_fields" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../1040Filler/2023/ReleaseV1/Fields/f1116@23_fields" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../1040Filler/2023/ReleaseV1/PDFs/f1040.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../1040Filler/2023/ReleaseV1/PDFs/f1040_fields" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../1040Filler/2023/ReleaseV1/PDFs/f1040s1.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../1040Filler/2023/ReleaseV1/PDFs/f1040s1_fields" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../1040Filler/2023/ReleaseV1/PDFs/f1040s3.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../1040Filler/2023/ReleaseV1/PDFs/f1040s8.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../1040Filler/2023/ReleaseV1/PDFs/f1040sd.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../1040Filler/2023/ReleaseV1/PDFs/f1116.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../1040Filler/2023/ReleaseV1/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../1040Filler/2023/Schedules.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../1040Filler/2023/Util.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../1040Filler/2023/build/Compliter/Analysis-00.toc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../1040Filler/2023/build/Compliter/Compliter.pkg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../1040Filler/2023/build/Compliter/EXE-00.toc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../1040Filler/2023/build/Compliter/PKG-00.toc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../1040Filler/2023/build/Compliter/PYZ-00.pyz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../1040Filler/2023/build/Compliter/PYZ-00.toc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../1040Filler/2023/build/Compliter/base_library.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../1040Filler/2023/build/Compliter/warn-Compliter.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../1040Filler/2023/build/Compliter/xref-Compliter.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../1040Filler/2023/dist/Compliter.exe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Compliter.spec" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/Compliter/Analysis-00.toc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/Compliter/COLLECT-00.toc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/Compliter/Compliter.exe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/Compliter/Compliter.pkg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/Compliter/EXE-00.toc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/Compliter/PKG-00.toc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/Compliter/PYZ-00.pyz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/Compliter/PYZ-00.toc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/Compliter/base_library.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/Compliter/warn-Compliter.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/Compliter/xref-Compliter.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/Compliter/Compliter.exe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/Compliter/_internal/VCRUNTIME140.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/Compliter/_internal/_bz2.pyd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/Compliter/_internal/_decimal.pyd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/Compliter/_internal/_hashlib.pyd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/Compliter/_internal/_lzma.pyd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/Compliter/_internal/_socket.pyd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/Compliter/_internal/_ssl.pyd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/Compliter/_internal/_uuid.pyd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/Compliter/_internal/base_library.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/Compliter/_internal/libcrypto-1_1.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/Compliter/_internal/libssl-1_1.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/Compliter/_internal/pyexpat.pyd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/Compliter/_internal/python310.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/Compliter/_internal/select.pyd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/Compliter/_internal/unicodedata.pyd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/1040_AutoScript.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/1040_AutoScript.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -22,9 +105,97 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true"
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "C:/Users/aman/Documents/GitHub/1040Filler/2023",
+    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\aman\Documents\GitHub\1040Filler\2023" />
+      <recent name="C:\Users\aman\PycharmProjects\1040_AutoScript@2023\fields_forms" />
+      <recent name="C:\Users\aman\PycharmProjects\1040_AutoScript@2023\Fields" />
+      <recent name="C:\Users\aman\PycharmProjects\1040_AutoScript@2023\PDFs" />
+      <recent name="C:\Users\aman\PycharmProjects\1040_AutoScript@2023" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\aman\PycharmProjects\1040_AutoScript@2023\fields_forms" />
+      <recent name="C:\Users\aman\PycharmProjects\1040_AutoScript@2023\PDFs" />
+      <recent name="C:\Users\aman\PycharmProjects\1040_AutoScript@2023\PDFs\22" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.Compliter (1)">
+    <configuration name="Compliter (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="1040_AutoScript@2023" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$USER_HOME$/PycharmProjects/1040_AutoScript@2023" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$USER_HOME$/PycharmProjects/1040_AutoScript@2023/Compliter.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Compliter" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="1040_AutoScript" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Compliter.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Util" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="1040_AutoScript@2023" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$USER_HOME$/PycharmProjects/1040_AutoScript@2023" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$USER_HOME$/PycharmProjects/1040_AutoScript@2023/Util.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.Compliter (1)" />
+        <item itemvalue="Python.Util" />
+        <item itemvalue="Python.Compliter" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -46,5 +217,31 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$USER_HOME$/PycharmProjects/1040_AutoScript@2023/Util.py</url>
+          <line>91</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$USER_HOME$/PycharmProjects/1040_AutoScript@2023/Util.py</url>
+          <line>113</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$USER_HOME$/PycharmProjects/1040_AutoScript@2023/Compliter.py</url>
+          <line>64</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$USER_HOME$/PycharmProjects/1040_AutoScript@2023/Compliter.py</url>
+          <line>63</line>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

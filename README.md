@@ -6,12 +6,12 @@ Auto script filler for 1040 froms. Nowadays is only for
 
 
 #  How exactly it works?
-In the folder who holds the script, is a config file nemed .editconfig . 
-This file contains all your information that are supposed to be calculated
-and processed by IRS in 1040. all the information is on your station, so no
+The main folder which holds a script has a config file nemed .editconfig . 
+This file contains all your information that will be calculated
+and processed by IRS - 1040. All the information is on your station, so no
 one can take any advantages from this file.
 There are few section:
-personal info - your family and you, input names and ssn.
+personal info - your family and you, input names, relation, and SSN.
 calc info - salary, stocks, Dmei Lyda, ect.
 
 
