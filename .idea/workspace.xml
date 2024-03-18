@@ -1,89 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="780aa7ad-f6e4-4fff-98ec-318efde01004" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../1040Filler/.idea/1040Filler.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../1040Filler/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../1040Filler/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../1040Filler/2023/.editconfig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../1040Filler/2023/Compliter.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../1040Filler/2023/Fields/f1040@23_fields" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../1040Filler/2023/Fields/f1040s1@23_fields" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../1040Filler/2023/Fields/f1040s3@23_fields" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../1040Filler/2023/Fields/f1040s8@23_fields" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../1040Filler/2023/Fields/f1040sD@23_fields" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../1040Filler/2023/Fields/f1116@23_fields" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../1040Filler/2023/PDFs/f1040.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../1040Filler/2023/PDFs/f1040_fields" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../1040Filler/2023/PDFs/f1040s1.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../1040Filler/2023/PDFs/f1040s1_fields" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../1040Filler/2023/PDFs/f1040s3.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../1040Filler/2023/PDFs/f1040s8.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../1040Filler/2023/PDFs/f1040sd.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../1040Filler/2023/PDFs/f1116.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../1040Filler/2023/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../1040Filler/2023/ReleaseV1/.editconfig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../1040Filler/2023/ReleaseV1/Compliter.exe" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../1040Filler/2023/ReleaseV1/Fields/f1040@23_fields" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../1040Filler/2023/ReleaseV1/Fields/f1040s1@23_fields" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../1040Filler/2023/ReleaseV1/Fields/f1040s3@23_fields" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../1040Filler/2023/ReleaseV1/Fields/f1040s8@23_fields" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../1040Filler/2023/ReleaseV1/Fields/f1040sD@23_fields" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../1040Filler/2023/ReleaseV1/Fields/f1116@23_fields" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../1040Filler/2023/ReleaseV1/PDFs/f1040.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../1040Filler/2023/ReleaseV1/PDFs/f1040_fields" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../1040Filler/2023/ReleaseV1/PDFs/f1040s1.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../1040Filler/2023/ReleaseV1/PDFs/f1040s1_fields" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../1040Filler/2023/ReleaseV1/PDFs/f1040s3.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../1040Filler/2023/ReleaseV1/PDFs/f1040s8.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../1040Filler/2023/ReleaseV1/PDFs/f1040sd.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../1040Filler/2023/ReleaseV1/PDFs/f1116.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../1040Filler/2023/ReleaseV1/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../1040Filler/2023/Schedules.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../1040Filler/2023/Util.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../1040Filler/2023/build/Compliter/Analysis-00.toc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../1040Filler/2023/build/Compliter/Compliter.pkg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../1040Filler/2023/build/Compliter/EXE-00.toc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../1040Filler/2023/build/Compliter/PKG-00.toc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../1040Filler/2023/build/Compliter/PYZ-00.pyz" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../1040Filler/2023/build/Compliter/PYZ-00.toc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../1040Filler/2023/build/Compliter/base_library.zip" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../1040Filler/2023/build/Compliter/warn-Compliter.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../1040Filler/2023/build/Compliter/xref-Compliter.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../1040Filler/2023/dist/Compliter.exe" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Compliter.spec" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/Compliter/Analysis-00.toc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/Compliter/COLLECT-00.toc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/Compliter/Compliter.exe" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/Compliter/Compliter.pkg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/Compliter/EXE-00.toc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/Compliter/PKG-00.toc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/Compliter/PYZ-00.pyz" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/Compliter/PYZ-00.toc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/Compliter/base_library.zip" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/Compliter/warn-Compliter.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/Compliter/xref-Compliter.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/Compliter/Compliter.exe" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/Compliter/_internal/VCRUNTIME140.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/Compliter/_internal/_bz2.pyd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/Compliter/_internal/_decimal.pyd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/Compliter/_internal/_hashlib.pyd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/Compliter/_internal/_lzma.pyd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/Compliter/_internal/_socket.pyd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/Compliter/_internal/_ssl.pyd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/Compliter/_internal/_uuid.pyd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/Compliter/_internal/base_library.zip" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/Compliter/_internal/libcrypto-1_1.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/Compliter/_internal/libssl-1_1.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/Compliter/_internal/pyexpat.pyd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/Compliter/_internal/python310.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/Compliter/_internal/select.pyd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/Compliter/_internal/unicodedata.pyd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/1040_AutoScript.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/1040_AutoScript.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+    <list default="true" id="780aa7ad-f6e4-4fff-98ec-318efde01004" name="Changes" comment="2024 is here and here are our files...&#10;Need to test before lunch">
+      <change beforePath="$PROJECT_DIR$/../1040Filler/2023/.editconfig" beforeDir="false" afterPath="$PROJECT_DIR$/../1040Filler/2023/.editconfig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,7 +11,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../1040Filler" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -205,6 +125,21 @@
       <option name="presentableId" value="Default" />
       <updated>1700000332331</updated>
     </task>
+    <task id="LOCAL-00001" summary="2024 is here and here are our files...&#10;Need to test before lunch">
+      <created>1710712727591</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1710712727591</updated>
+    </task>
+    <task id="LOCAL-00002" summary="2024 is here and here are our files...&#10;Need to test before lunch">
+      <created>1710712739440</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1710712739440</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -217,6 +152,10 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="2024 is here and here are our files...&#10;Need to test before lunch" />
+    <option name="LAST_COMMIT_MESSAGE" value="2024 is here and here are our files...&#10;Need to test before lunch" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
