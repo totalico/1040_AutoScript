@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="780aa7ad-f6e4-4fff-98ec-318efde01004" name="Changes" comment="changes in Dmei-lida and fixing line 13.&#10;as well others forms.&#10;fix 8812 bona-fide resident Poerto Rico">
-      <change beforePath="$PROJECT_DIR$/../1040Filler/2023/.editconfig" beforeDir="false" afterPath="$PROJECT_DIR$/../1040Filler/2023/.editconfig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../1040Filler/2023/Compliter.py" beforeDir="false" afterPath="$PROJECT_DIR$/../1040Filler/2023/Compliter.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../1040Filler/2023/Schedules.py" beforeDir="false" afterPath="$PROJECT_DIR$/../1040Filler/2023/Schedules.py" afterDir="false" />
+    <list default="true" id="780aa7ad-f6e4-4fff-98ec-318efde01004" name="Changes" comment="changes in Dmei-lida and fixing line 13.&#10;as well others forms.&#10;fix 8812 bona-fide resident Poerto Rico&#10;fix STMT pdf.">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -213,7 +211,14 @@
       <option name="project" value="LOCAL" />
       <updated>1710801041991</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="changes in Dmei-lida and fixing line 13.&#10;as well others forms.&#10;fix 8812 bona-fide resident Poerto Rico&#10;fix STMT pdf.">
+      <created>1710801774500</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1710801774500</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -233,7 +238,8 @@
     <MESSAGE value="2024 is here and here are our files...&#10;Need to test before lunch&#10;&#10;CONFIG file changed.&#10;pdf format better" />
     <MESSAGE value="changes in Dmei-lida and fixing line 13.&#10;as well others forms." />
     <MESSAGE value="changes in Dmei-lida and fixing line 13.&#10;as well others forms.&#10;fix 8812 bona-fide resident Poerto Rico" />
-    <option name="LAST_COMMIT_MESSAGE" value="changes in Dmei-lida and fixing line 13.&#10;as well others forms.&#10;fix 8812 bona-fide resident Poerto Rico" />
+    <MESSAGE value="changes in Dmei-lida and fixing line 13.&#10;as well others forms.&#10;fix 8812 bona-fide resident Poerto Rico&#10;fix STMT pdf." />
+    <option name="LAST_COMMIT_MESSAGE" value="changes in Dmei-lida and fixing line 13.&#10;as well others forms.&#10;fix 8812 bona-fide resident Poerto Rico&#10;fix STMT pdf." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
