@@ -42,17 +42,17 @@ apt=8
 country=ISREAL
 zip=4974447
 #max 9 digits
-rout=1111111
+rout=322271627
 #max 17 digits
-account=000000
+account=587082287
 
 [DEPENDENCE]
 binyamin =  name : BIMYAMIN,  ssn : 782085304, rel : SON
 naama =     name : NAAMA,     ssn : 721481185, rel : DAUGHTER
 yaakov =    name : YAAKOV,    ssn : 870620080, rel : SON
 miriam =    name : MIRIAM,    ssn : 775386334, rel : DAUGHTER
-yonatan =    name : YONATAN,  ssn :    9090  , rel : SON
-tamar =      name : TAMAR,    ssn :    8008  , rel : DAUGHTER
+yonatan =    name : YONATAN,  ssn : 172737185  , rel : SON
+tamar =      name : TAMAR,    ssn : 359535010  , rel : DAUGHTER
 
 [CALC_DATA]
 salary_in_ILS=226894

@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="780aa7ad-f6e4-4fff-98ec-318efde01004" name="Changes" comment="2024 is here and here are our files...&#10;Need to test before lunch">
-      <change beforePath="$PROJECT_DIR$/../1040Filler/2023/.editconfig" beforeDir="false" afterPath="$PROJECT_DIR$/../1040Filler/2023/.editconfig" afterDir="false" />
+    <list default="true" id="780aa7ad-f6e4-4fff-98ec-318efde01004" name="Changes" comment="2024 is here and here are our files...&#10;Need to test before lunch&#10;&#10;CONFIG file changed">
+      <change beforePath="$PROJECT_DIR$/../1040Filler/2023/Util.py" beforeDir="false" afterPath="$PROJECT_DIR$/../1040Filler/2023/Util.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.editconfig" beforeDir="false" afterPath="$PROJECT_DIR$/.editconfig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -139,7 +140,14 @@
       <option name="project" value="LOCAL" />
       <updated>1710712739440</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="2024 is here and here are our files...&#10;Need to test before lunch&#10;&#10;CONFIG file changed">
+      <created>1710740390257</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1710740390257</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -155,7 +163,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="2024 is here and here are our files...&#10;Need to test before lunch" />
-    <option name="LAST_COMMIT_MESSAGE" value="2024 is here and here are our files...&#10;Need to test before lunch" />
+    <MESSAGE value="2024 is here and here are our files...&#10;Need to test before lunch&#10;&#10;CONFIG file changed" />
+    <option name="LAST_COMMIT_MESSAGE" value="2024 is here and here are our files...&#10;Need to test before lunch&#10;&#10;CONFIG file changed" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
