@@ -44,9 +44,22 @@ def f8812 (schedulePath, scheduleFields ,f1040_l1 , f1040_l11 ,f1040_l18_tax ,s3
     l19 = l18a-2500
     l20 = int(l19*0.15)
     l25 = 0
-    l26 =l20
-    l27 = l26
+    l26 = 0
+    if l16b >= 4800:
+        if l20 > l17:
+            l27 = l17
+        else:
+            print('You need to fill in 8812 form Part II-B manually!')
+            l27=l17
+    else:
+        print('If are a bona fide resident of Puerto Rico, go to line 21')
+        if l20 > l17:
+            l27 = l20
+        else:
+            l27 = l17
+
     result['l28']= l27
+
 
 
     reader = PdfReader(schedulePath)
@@ -364,6 +377,7 @@ def schedule_1(schedulePath, scheduleFields ,reason='PAYMENTS INSTEAD OF SALARY 
         print('Dmei-Lyda is 0.')
         return 0
 
+    dmei_lida_USD = int(float(data['dmei_liyda']) / float(data['ils_usd_rate']))
 
     fields = configObjToArray('FIELDS', scheduleFields)
     personal_data = configObjToArray('FILLER_DETAILS', '.\\.editconfig')
@@ -377,12 +391,12 @@ def schedule_1(schedulePath, scheduleFields ,reason='PAYMENTS INSTEAD OF SALARY 
             fields['ssn']: personal_data['ssn'],
             # fields['other_income_sum'] : ,
             fields['other_income_src']: reason,
-            fields['other_income_amount']: data['dmei_liyda'],
-            fields['total_income']: data['dmei_liyda'],
-            fields['sum']: data['dmei_liyda']})
+            fields['other_income_amount']: dmei_lida_USD,
+            fields['total_income']: dmei_lida_USD,
+            fields['sum']: dmei_lida_USD})
 
     # write "Output-beta" to pypdf-Output-beta.pdf
     with open(outputfile, "wb") as output_stream:
         writer.write(output_stream)
     forms.append('schedule 1')
-    return int (data['dmei_liyda'])
+    return int (dmei_lida_USD)

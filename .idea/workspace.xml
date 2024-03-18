@@ -1,10 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="780aa7ad-f6e4-4fff-98ec-318efde01004" name="Changes" comment="2024 is here and here are our files...&#10;Need to test before lunch&#10;&#10;CONFIG file changed">
+    <list default="true" id="780aa7ad-f6e4-4fff-98ec-318efde01004" name="Changes" comment="2024 is here and here are our files...&#10;Need to test before lunch&#10;&#10;CONFIG file changed.&#10;pdf format better">
+      <change afterPath="$PROJECT_DIR$/PDFs/f1040s1.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../1040Filler/2023/Compliter.py" beforeDir="false" afterPath="$PROJECT_DIR$/../1040Filler/2023/Compliter.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../1040Filler/2023/Fields/f1040@23_fields" beforeDir="false" afterPath="$PROJECT_DIR$/../1040Filler/2023/Fields/f1040@23_fields" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../1040Filler/2023/PDFs/f1040_fields" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../1040Filler/2023/PDFs/f1040s1_fields" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../1040Filler/2023/Schedules.py" beforeDir="false" afterPath="$PROJECT_DIR$/../1040Filler/2023/Schedules.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../1040Filler/2023/Util.py" beforeDir="false" afterPath="$PROJECT_DIR$/../1040Filler/2023/Util.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.editconfig" beforeDir="false" afterPath="$PROJECT_DIR$/.editconfig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/1040_AutoScript.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/1040_AutoScript.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compliter.py" beforeDir="false" afterPath="$PROJECT_DIR$/Compliter.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Fields/f1040s1.pdf_fields_f" beforeDir="false" afterPath="$PROJECT_DIR$/Fields/f1040s1_f" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Output-beta/scheduleD_2022.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Schedules.py" beforeDir="false" afterPath="$PROJECT_DIR$/Schedules.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HashcatUI/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../HashcatUI/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,12 +54,13 @@
       <recent name="C:\Users\aman\PycharmProjects\1040_AutoScript@2023" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\aman\Documents\GitHub\1040_AutoScript\PDFs" />
       <recent name="C:\Users\aman\PycharmProjects\1040_AutoScript@2023\fields_forms" />
       <recent name="C:\Users\aman\PycharmProjects\1040_AutoScript@2023\PDFs" />
       <recent name="C:\Users\aman\PycharmProjects\1040_AutoScript@2023\PDFs\22" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.Compliter (1)">
+  <component name="RunManager" selected="Python.Util (1)">
     <configuration name="Compliter (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="1040_AutoScript@2023" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -88,6 +103,27 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="Util (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="1040Filler" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../1040Filler/2023" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../1040Filler/2023/Util.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="Util" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="1040_AutoScript@2023" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -111,9 +147,10 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.Util (1)" />
+        <item itemvalue="Python.Compliter" />
         <item itemvalue="Python.Compliter (1)" />
         <item itemvalue="Python.Util" />
-        <item itemvalue="Python.Compliter" />
       </list>
     </recent_temporary>
   </component>
@@ -147,7 +184,14 @@
       <option name="project" value="LOCAL" />
       <updated>1710740390257</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="2024 is here and here are our files...&#10;Need to test before lunch&#10;&#10;CONFIG file changed.&#10;pdf format better">
+      <created>1710745977319</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1710745977319</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -164,7 +208,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="2024 is here and here are our files...&#10;Need to test before lunch" />
     <MESSAGE value="2024 is here and here are our files...&#10;Need to test before lunch&#10;&#10;CONFIG file changed" />
-    <option name="LAST_COMMIT_MESSAGE" value="2024 is here and here are our files...&#10;Need to test before lunch&#10;&#10;CONFIG file changed" />
+    <MESSAGE value="2024 is here and here are our files...&#10;Need to test before lunch&#10;&#10;CONFIG file changed.&#10;pdf format better" />
+    <option name="LAST_COMMIT_MESSAGE" value="2024 is here and here are our files...&#10;Need to test before lunch&#10;&#10;CONFIG file changed.&#10;pdf format better" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -188,6 +233,26 @@
           <url>file://$USER_HOME$/PycharmProjects/1040_AutoScript@2023/Compliter.py</url>
           <line>63</line>
           <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Schedules.py</url>
+          <line>136</line>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Compliter.py</url>
+          <line>55</line>
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/../1040Filler/2023/Util.py</url>
+          <line>171</line>
+          <option name="timeStamp" value="15" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/../1040Filler/2023/Util.py</url>
+          <line>74</line>
+          <option name="timeStamp" value="16" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

@@ -6,5 +6,6 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="1040_AutoScript@2023" />
     <orderEntry type="module" module-name="1040Filler" />
+    <orderEntry type="module" module-name="HashcatUI" />
   </component>
 </module>

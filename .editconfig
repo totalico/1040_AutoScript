@@ -56,7 +56,7 @@ tamar =      name : TAMAR,    ssn : 359535010  , rel : DAUGHTER
 
 [CALC_DATA]
 salary_in_ILS=226894
-dmei_liyda = 0
+dmei_liyda = 66030
 
 ILS_USD_rate=3.5
 tax_in_ILS=16417

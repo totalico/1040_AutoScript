@@ -123,6 +123,7 @@ def reader():
                                 fields['qualified_dividends']:str(l3a),
                                 fields['ordinary_dividends'] : str(l3b),
                                 fields['capital_gain']:str(l7),
+                                fields['dmei_liyda']:str(l8),
                                 fields['total_income']:str (l9),
                                 fields['total_adjusted']:str(l10),
                                 fields['total_income_adjusted']:str(l11),
