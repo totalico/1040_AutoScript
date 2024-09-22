@@ -14,7 +14,7 @@ There are few section:
 personal info - your family and you, input names, relation, and SSN.
 calc info - salary, stocks, Dmei Lyda, ect.
 
-
+#
 
 #  Principals
 
