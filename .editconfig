@@ -8,6 +8,7 @@
 # max_line_length = 120
 # tab_width = 4
 
+#  DONT TOUCH!!!!!!!!!!!!!!
 [PDF_FORMS]
 1040 =       name: f1040.pdf                 , fieldsFile: f1040_fields_f
 schedule1=   name: f1040s1.pdf               , fieldsFile: f1040s1_f
@@ -20,43 +21,47 @@ scheduleD=   name:f1040sched_D_2022.pdf      , fieldsFile: f1040sched_D_2022.pdf
 form_8812=   name:f1040s8--2022.pdf          , fieldsFile: f1040s8--2022_fields_f
 form_1116=   name:f1116_2022.pdf              , fieldsFile :f1116_2022_fields_f
 
+
+#  DONT TOUCH!!!!!!!!!!!!!!
 [OTHER_FORMS]
 summarizedFileName = Declarations.txt
 worksheet = Worksheet_qualified_dividnends_and_capital_gain_tax_output.txt
 
+
+#  DONT TOUCH!!!!!!!!!!!!!!
 [DIRS]
 pdfs = .\PDFs
 fields_forms = .\Fields
 output_folder= .\Output-beta
 
 [FILLER_DETAILS]
-name =      PESIA ELKA
-family_name= SEINFELD
-ssn=        215354998
-occupation= COMPUTERS
-email=      pesikins@gmail.com
-phone=       +972-583-215858
-address=        24 ARIE BEN ELIEZER STREET
-city=PETACH-TIQUA
+name =      PE EL
+family_name= SEIN
+ssn=        2199999998
+occupation= TEACHER
+email=      pesiPESI@gmail.com
+phone=       +972-583-585858
+address=        45 ARIE BEN ELIEZER STREET
+city= HAIFA
 apt=8
 country=ISREAL
 zip=4974447
 #max 9 digits
-rout=322271627
+rout=322223627
 #max 17 digits
-account=587082287
+account=5844452287
 
 [DEPENDENCE]
-binyamin =  name : BIMYAMIN,  ssn : 782085304, rel : SON
-naama =     name : NAAMA,     ssn : 721481185, rel : DAUGHTER
-yaakov =    name : YAAKOV,    ssn : 870620080, rel : SON
-miriam =    name : MIRIAM,    ssn : 775386334, rel : DAUGHTER
-yonatan =    name : YONATAN,  ssn : 172737185  , rel : SON
-tamar =      name : TAMAR,    ssn : 359535010  , rel : DAUGHTER
+binyamin =  name : BIMYAMIN,  ssn : 78222204, rel : SON
+naama =     name : NAAMA,     ssn : 7212222285, rel : DAUGHTER
+yaakov =    name : YAAKOV,    ssn : 870222220, rel : SON
+miriam =    name : MIRIAM,    ssn : 775222224, rel : DAUGHTER
+yonatan =    name : YONATAN,  ssn : 1727222225  , rel : SON
+tamar =      name : TAMAR,    ssn : 3522222210  , rel : DAUGHTER
 
 [CALC_DATA]
-salary_in_ILS=226894
-dmei_liyda = 66030
+salary_in_ILS=22222
+dmei_liyda = 62222
 
 ILS_USD_rate=3.5
 tax_in_ILS=16417
