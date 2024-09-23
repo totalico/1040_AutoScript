@@ -26,11 +26,12 @@ calc info - salary, stocks, Dmei Lyda, ect.
 1. Download and install python interpreter.
 2. Clone "https://github.com/totalico/1040_AutoScript" folder on your machine
 3. CD to directory, and create new virtual environment by typing: "python -m venv venv"
-4. Install dependencies: "pip install -r requirements.txt"
-5. Edit ".editconfig" file to your needs.
-6. Run the script: "python compliter.py" .fill the data from irs_2022 instructions in the tax tables.
-7. Follow the instructions. You should get all files in "output-beta" folder. 
-8. Remember! fill all checkboxes manually! 
+4. Activate your virtual Env: "/venv/Scripts/activate"
+5. Install dependencies: "pip install -r requirements.txt"
+6. Edit ".editconfig" file to your needs.
+7. Run the script: "python compliter.py" .fill the data from irs_2022 instructions in the tax tables.
+8. Follow the instructions. You should get all files in "output-beta" folder. 
+9. Remember! fill all checkboxes manually! 
 
 # Important to this version
 
